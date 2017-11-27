@@ -4,8 +4,8 @@ import { RouterModule } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { ContactoComponent } from './contacto/contacto.component';
-import { NoContentComponent } from './no-content/no-content.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { NoContentComponent } from './pages/no-content/no-content.component';
 import { AppRoutingModule }     from './app.routes';
 
 
