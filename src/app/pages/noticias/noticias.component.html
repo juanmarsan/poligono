@@ -1,1 +1,5 @@
-{{ title }}pepq
+<h2>{{ title }}</h2>
+
+<ul>
+  <li *ngFor="let noticia of noticias">#{{noticia.id}}: {{noticia.title}}--{{noticia.descripcion}}</li>
+</ul>

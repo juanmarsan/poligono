@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
 })
 export class ContactoComponent {
   public title : string = 'contqcto';
+  public counter: number = 0;
+
+  addNumber(){
+    this.counter++;
+  }
 }

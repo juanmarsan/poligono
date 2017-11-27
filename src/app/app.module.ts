@@ -1,12 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
+import { AppRoutingModule }     from './app.routes';
 
 import { AppComponent } from './app.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { NoContentComponent } from './pages/no-content/no-content.component';
-import { AppRoutingModule }     from './app.routes';
+import {NoticiasService} from "../core/domain/services/noticiasService";
 
 
 @NgModule({
@@ -15,11 +14,11 @@ import { AppRoutingModule }     from './app.routes';
     ContactoComponent,
     NoContentComponent
   ],
+  providers: [NoticiasService],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
