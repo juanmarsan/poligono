@@ -1,0 +1,82 @@
+.formContacto{
+	width: 44%;	
+	float:left;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+.formu{
+	background: white none repeat scroll 0 0;
+    border-color: #d0d7de;
+    border-radius: 4px;
+    border-width: 1px;
+    box-shadow: none;
+    font-size: 12px;
+    font-weight: 300;
+    height: 20px;
+    outline: medium none;
+    padding: 8px 14px;
+    width: 99%;
+    margin: 1%;
+}
+
+
+.formContacto textarea{
+background: white none repeat scroll 0 0;
+    border-color: #d0d7de;
+    border-radius: 4px;
+    border-width: 1px;
+    box-shadow: none;
+    font-size: 12px;
+    font-weight: 300;
+    height: 70px;
+    outline: medium none;
+    padding: 8px 14px;
+    width: 99%;
+    margin:1%;
+}
+
+.btnEnvio{
+	-moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    margin-bottom: 0;
+    padding: 6px 0;
+    text-align: center;
+    touch-action: manipulation;
+    transition: all 0.3s ease 0s;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 42%;
+}
+.textoContacto{
+	width: 47%;
+	float:left;
+	padding-right: 3%;
+}
+
+.imagenContacto{
+	width: 47%;
+	float:left;
+	padding-right: 3%;
+}
+.imagenContacto img{
+    width: 100%;
+}
+
+.dondeContactar{
+	width: 45%;
+	float:left;
+	padding: 2%;
+}
+
+.relleno{
+	margin-top: 5%;
+}

@@ -1,0 +1,37 @@
+<div class="index">
+	<div>
+		<h2>{{ title }}</h2>
+	</div>
+
+	<div class="indexContacto">
+		<div>
+			{{indexContacto}}
+		</div>	
+		<div class="relleno">
+			<div class="imagenContacto">
+				<img src="/assets/img/mapa.png" >
+			</div>
+			<div class="dondeContactar">
+				<p>{{ lugar }} <br> 
+				 	{{ poblacion }}</p>
+				<p>{{ telefono }}</p>
+				<p>{{ mail }}</p>
+				<p>{{ horario }}</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="formContacto">
+		Formulario de Contacto
+		<form>
+		  <input class="formu" type="text" name="name" placeholder="Nombre"><br>
+		  <input class="formu" type="text" name="email" placeholder="Email"><br>
+		  <input class="formu" type="text" name="telefono" placeholder="Telefono"><br>
+		  <textarea  name="comment" placeholder="Comentarios"></textarea><br>
+		  <input class="btnEnvio" type="submit" value="Enviar" src="assets/img/bntEnviar.png">
+		</form>
+	</div>
+</div>
+
+<button (click)="addNumber()">add</button>--->{{counter}}
