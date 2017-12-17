@@ -1,5 +1,11 @@
 <h2>{{ title }}</h2>
 
-<ul>
-  <li *ngFor="let noticia of noticias">#{{noticia.id}}: {{noticia.title}}--{{noticia.descripcion}}</li>
-</ul>
+<div>
+	<div class="contenido" *ngFor="let noticia of noticias" id="{{noticia.id}}">
+		<img src="">
+		<p>{{noticia.title}}</p>
+		<p>{{noticia.descripcion}}</p>
+
+	</div>
+
+</div>

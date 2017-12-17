@@ -1,3 +1,43 @@
 main{
-  border: 1px solid black;
+    font-family: 'Neuton', serif;
 }
+
+.contenedor{
+	margin:7%;
+}
+
+footer{
+	margin-top: 5%;
+}
+
+.imgLogo{
+	width: 5%;
+	height: 5%;
+	float:left;
+	padding-left: 7%;
+}
+.imgLogo img{
+    width: 100%;    
+}
+
+.menu{
+	float: left;
+	width: 88%;
+	height: 5%;
+}
+
+.menu nav a{
+	float: right;
+	padding-right: 5%;
+	padding-top: 2%
+}
+
+
+.divPie{
+	float: left;
+	width: 20%;
+	margin: 2%;
+	text-align: center;
+}
+
+

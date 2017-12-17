@@ -1,25 +1,42 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-   <!-- Welcome to {{ title }}!-->
-  </h1>
+  <!--<h1>
+   {{ title }}
+  </h1>-->
 </div>
-
-
+<div class="imgLogo">
+  <img src="/assets/img/logoAjuntament.png" >
+</div>
+<div class="menu">
     <nav>
-      <a [routerLink]=" ['./noticias'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Noticias
-      </a>
+      
       <a [routerLink]=" ['./contacto'] "
         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
         Contacto
       </a>
-    </nav>
+       <a [routerLink]=" ['./noticias'] "
+        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        Noticias
+      </a>      
 
+      <a [routerLink]=" ['./index'] "
+        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        Noticias
+      </a>
+    </nav>
+</div>
     <main>
-      <router-outlet></router-outlet>
+      <div class="contenedor">
+        <router-outlet></router-outlet>
+      </div>
     </main>
 
 
-<footer>PEPA IS FOOTER</footer>
+<footer>
+  <div class="footer" >
+    <div class="divPie">INFORMACIÓN</div>
+    <div class="divPie">NAVEGACIÓN WEB</div>
+    <div class="divPie">NOTICIAS</div>
+    <div class="divPie">CONTACTA</div>
+  </div>
+</footer>

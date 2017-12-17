@@ -18,5 +18,4 @@ export class NoticiasService implements INoticiasService{
   getNoticia(i: number):Noticia{
     return i >=0 && this.misNoticias[i]
   }
-
 }

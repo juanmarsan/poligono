@@ -4,6 +4,7 @@ import { AppRoutingModule }     from './app.routes';
 
 import { AppComponent } from './app.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { IndexComponent } from './pages/index/index.component';
 import { NoContentComponent } from './pages/no-content/no-content.component';
 import {NoticiasService} from "../core/domain/services/noticiasService";
 
@@ -12,6 +13,7 @@ import {NoticiasService} from "../core/domain/services/noticiasService";
   declarations: [
     AppComponent,
     ContactoComponent,
+    IndexComponent,
     NoContentComponent
   ],
   providers: [NoticiasService],
