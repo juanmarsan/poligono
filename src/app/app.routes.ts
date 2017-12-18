@@ -1,8 +1,8 @@
 import { RouterModule, Routes } from '@angular/router';
-import { ContactoComponent } from './pages/index/index.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { NoContentComponent } from './pages/no-content/no-content.component';
 import { NgModule } from '@angular/core';
+import {IndexComponent} from "./pages/index/index.component";
 
 
 const ROUTES: Routes = [
