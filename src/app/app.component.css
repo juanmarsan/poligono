@@ -1,13 +1,24 @@
 main{
     font-family: 'Neuton', serif;
 }
-
+.header-wrapper{
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
 .contenedor{
-	margin:7%;
+	margin:7% 0 0 0;
 }
 
 footer{
-	margin-top: 5%;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:50px;
+  width:100%;
+  background:#999;
 }
 
 .imgLogo{
@@ -17,7 +28,7 @@ footer{
 	padding-left: 7%;
 }
 .imgLogo img{
-    width: 100%;    
+    width: 100%;
 }
 
 .menu{

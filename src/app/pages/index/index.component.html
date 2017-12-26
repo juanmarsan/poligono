@@ -1,18 +1,19 @@
 <div class="index">
-	<div>
+	<div class="big-title-wrapper">
 		<h2>{{ title }}</h2>
 	</div>
 
+  <div class="content-wrapper">
 	<div class="indexContacto">
 		<div>
 			{{indexContacto}}
-		</div>	
+		</div>
 		<div class="relleno">
 			<div class="imagenContacto">
 				<img src="/assets/img/mapa.png" >
 			</div>
 			<div class="dondeContactar">
-				<p>{{ lugar }} <br> 
+				<p>{{ lugar }} <br>
 				 	{{ poblacion }}</p>
 				<p>{{ telefono }}</p>
 				<p>{{ mail }}</p>
@@ -35,3 +36,5 @@
 </div>
 
 <button (click)="addNumber()">add</button>--->{{counter}}
+
+</div>

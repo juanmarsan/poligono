@@ -1,21 +1,25 @@
-import {INoticiasService} from "./contracts/iNoticiasService";
+
 import {Noticia} from "../models/noticia";
+import 'rxjs/add/operator/map';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {INoticiasService} from './contracts/iNoticiasService';
 
+@Injectable()
 export class NoticiasService implements INoticiasService{
-  misNoticias: Array<Noticia>;
+  misNoticias: Array<Noticia> =  [];
+  url: string = "http://192.168.221.22/poligono/verNoticia.php";
 
-  constructor(){
-    this.misNoticias = [
-      {id: 0, title: 'ETA', descripcion: 'este es el anyo del final de ETA'},
-      {id: 1, title: 'BARCELONA', descripcion: 'barcelona se independiza...bla bla'},
-      {id: 2, title: 'coca beach', descripcion: 'el coca b. ha sido elegidoc opmo....'}
-    ]
+  constructor(private http: HttpClient) {}
+
+  getNoticias() {
+    return this.http.get(this.url).map(this.extractData);
+  }
+  getNoticia(i: number): Noticia {
+    return i >= 0 && this.misNoticias[i];
   }
 
-  getNoticias():Array<Noticia>{
-    return this.misNoticias;
-  }
-  getNoticia(i: number):Noticia{
-    return i >=0 && this.misNoticias[i]
+  private extractData(res: Response) {
+    return res;
   }
 }

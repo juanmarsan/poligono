@@ -1,6 +1,8 @@
-import {Noticia} from "../../models/noticia";
-export interface INoticiasService{
+import {Noticia} from '../../models/noticia';
+import {Observable} from 'rxjs/Observable';
+export interface INoticiasService {
 
-  getNoticias():Array<Noticia>;
-  getNoticia(i: number):Noticia;
+  getNoticias(): Observable<Noticia[]>;
+  getNoticia(i: number): Noticia;
+  extractData(res: Response): any;
 }
