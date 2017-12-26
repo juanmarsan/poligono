@@ -12,7 +12,7 @@ import {NoticiasService} from "../../../core/domain/services/noticiasService";
 
 export class NoticiasComponent {
   public title : string = 'Noticias';
-  public noticias: Array<Noticia>;
+  public noticias: any;
 
   constructor(private noticiasService: NoticiasService) {
     this.noticiasService.getNoticias().subscribe(response => {
