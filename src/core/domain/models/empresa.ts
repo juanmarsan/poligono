@@ -6,7 +6,6 @@ export class Empresa{
   poligono: string;
   telefono: string;
   movil: string;
-  web: string;
   fax: string;
   email: string;
   web: string;
