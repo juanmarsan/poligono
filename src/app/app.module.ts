@@ -7,6 +7,8 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { IndexComponent } from './pages/index/index.component';
 import { NoContentComponent } from './pages/no-content/no-content.component';
 import {NoticiasService} from '../core/domain/services/noticiasService';
+
+import {EmpresasService} from '../core/domain/services/empresasService';
 import {HttpClientModule} from '@angular/common/http';
 
 
@@ -22,7 +24,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [NoticiasService],
+  providers: [NoticiasService],EmpresasService,
   bootstrap: [AppComponent]
 })
 export class AppModule { }
