@@ -7,7 +7,7 @@ import {IndexComponent} from "./pages/index/index.component";
 
 const ROUTES: Routes = [
   { path: '',      component: ContactoComponent },
-  { path: 'index', component: IndexComponent },
+  { path: 'index', loadChildren: './pages/index/index.module#IndexModule',  data: { preload: false }},
    { path: 'contacto', component: ContactoComponent },
   { path: 'noticias', loadChildren: './pages/noticias/noticias.module#NoticiasModule',  data: { preload: false }},
   { path: '**',    component: NoContentComponent },

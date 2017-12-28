@@ -10,14 +10,16 @@ import {EmpresasService} from "../../../core/domain/services/empresasService";
 export class IndexComponent {
   public title : string = 'Inicio';
 
- public Empresas: any;
+ public empresas: any;
+
+
 
   constructor(private empresasService: EmpresasService) {
     this.empresasService.getEmpresas().subscribe(response => {
-      this.Empresas = response;
+      this.empresas = response;
     });
 
-
+}
 
   public services : string = 'SERVICIOS QUE ORFRECEMOS';
   public servicesLittle : string = 'A SU DISPOSICIÓN';
