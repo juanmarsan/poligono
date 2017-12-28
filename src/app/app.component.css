@@ -1,12 +1,17 @@
 main{
     font-family: 'Neuton', serif;
 }
+a:link   
+{   
+ text-decoration:none;   
+}   
+
 .header-wrapper{
   overflow: hidden;
-  background-color: #333;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+  background-color: white;
 }
 .contenedor{
 	margin:7% 0 0 0;
@@ -34,15 +39,22 @@ footer{
 .menu{
 	float: left;
 	width: 88%;
-	height: 5%;
+	height: 100px;
 }
-
+.menu nav{
+	text-align: center;
+}
 .menu nav a{
 	float: right;
 	padding-right: 5%;
-	padding-top: 2%
+	padding-left: 5%;
+	text-align: center;
+	line-height: 100px;
 }
-
+.menu nav a:hover{
+color: white;
+background-color: blue;
+}
 
 .divPie{
 	float: left;

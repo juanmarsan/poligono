@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Empresa} from "../../../core/domain/models/noticia";
+import {EmpresasService} from "../../../core/domain/services/empresasService";
 
 @Component({
   selector: 'index-directive',
@@ -7,6 +9,21 @@ import { Component } from '@angular/core';
 })
 export class IndexComponent {
   public title : string = 'Inicio';
+
+ public Empresas: any;
+
+  constructor(private empresasService: EmpresasService) {
+    this.empresasService.getEmpresas().subscribe(response => {
+      this.Empresas = response;
+    });
+
+
+
+  public services : string = 'SERVICIOS QUE ORFRECEMOS';
+  public servicesLittle : string = 'A SU DISPOSICIÓN';
+  public businessTitle : string = 'ALGUNAS DE LAS EMPRESAS';
+
+  
 
  public indexContacto : string = 'Puede contactar por cualquiera de los métodos que aparecen en esta página. Si lo desea, también puede hacerlo rellenando el siguiente formulario. Sus datos serán tratados en cumplimiento con lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal.';
 

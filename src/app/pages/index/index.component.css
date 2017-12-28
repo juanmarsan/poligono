@@ -1,10 +1,49 @@
 .big-title-wrapper{
   background-color: aqua;
-  height: 100px;
+  height: 200px;
   width: 100%;
-  position: fixed;
+  background-image: url("/assets/img/aieloPanoramica.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-filter: grayscale(-50%);
+filter: grayscale(-50%);
 }
+
+.big-title-wrapper h2{
+	text-align: center;
+	line-height: 200px;
+	font-family: "Roboto Condensed",sans-serif;
+}
+
 .content-wrapper{
-  width: 100%;;
   padding: 50px;
+}
+
+.indexContacto{
+  width: 100%;
+}
+
+.title-information{
+  width: 100%;
+}
+
+.title-information h2,p{
+  text-align: center;
+}
+
+.information-pointer{
+  float: left;
+  width: 33.33333333333%;
+}
+
+.information-pointer h3{
+  text-align: center;
+}
+
+.title-business{
+  width: 100%
+}
+
+.title-business h2{
+  text-align: center;
 }
