@@ -3,11 +3,12 @@
 </div>
 <div>
 	<div class="contenido" *ngFor="let noticia of noticias" id="{{noticia.id}}">
-		<img src="">
-		<p>{{noticia.title}}</p>
-		<p>{{noticia.descripcion}}</p>
-    <p>{{noticia.fecha}}</p>
-
+		<a href="">
+			<img src="#/verNoticia/{{noticia.photo}}">
+			<p>{{noticia.title}}</p>
+			<p>{{noticia.descripcion}}</p>
+	    	<p>{{noticia.fecha}}</p>
+		</a>
 	</div>
 
 </div>

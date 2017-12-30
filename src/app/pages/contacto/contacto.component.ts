@@ -15,11 +15,14 @@ export class ContactoComponent {
   public telefono : string = '666 999 111';
   public mail : string = 'msil@mail.mail';
   public horario : string = ' L -V de 10:00 a 12:00';
-
-
+  public formularioContacto : string = 'FORMULARIO DE CONTACTO';
   public counter: number = 0;
 
   addNumber(){
     this.counter++;
+  }
+
+  sendForm(){
+  
   }
 }

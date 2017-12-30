@@ -18,8 +18,7 @@ export class IndexComponent {
     this.empresasService.getEmpresas().subscribe(response => {
       this.empresas = response;
     });
-
-}
+  }
 
   public services : string = 'SERVICIOS QUE ORFRECEMOS';
   public servicesLittle : string = 'A SU DISPOSICIÓN';
