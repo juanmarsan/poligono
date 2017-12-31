@@ -10,6 +10,7 @@ import {NoticiasService} from '../core/domain/services/noticiasService';
 import {EmpresasService} from '../core/domain/services/empresasService';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import {SharedModule} from './shared/shared.module';
 
 
 
@@ -23,9 +24,10 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
-  providers: [NoticiasService,EmpresasService],
+  providers: [NoticiasService, EmpresasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

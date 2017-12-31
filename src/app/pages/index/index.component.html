@@ -42,20 +42,7 @@
 	</div>
 
 
-	<div class="formContacto" *ngIf="! contactoPeticionEnviado">
-		Formulario de Contacto
-		<form  #myForm="ngForm" (ngSubmit)="sendForm(myForm.value)">
-		  <input class="formu" type="text" name="name" placeholder="Nombre" ngModel required><br>
-		  <input class="formu" type="email" name="email" placeholder="Email" ngModel required><br>
-		  <input class="formu" type="text" name="telefono" placeholder="Telefono" ngModel required><br>
-		  <textarea  name="comment" placeholder="Comentarios" ngModel required></textarea><br>
-      <button type="submit" [disabled]="! myForm.form.valid"  name="send" >send</button>
-		</form>
-	</div>
-    <div *ngIf="contactoPeticionEnviado">
-      FORMULARIO ENVIADO, LES CONTACTAREMOS PRONTO
-    </div>
-</div>
+	<app-contacto-form></app-contacto-form>
 
 <button (click)="addNumber()">add</button>--->{{counter}}
 

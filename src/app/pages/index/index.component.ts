@@ -20,7 +20,6 @@ export class IndexComponent {
   public telefono : string = '666 999 111';
   public mail : string = 'msil@mail.mail';
   public horario : string = ' L -V de 10:00 a 12:00';
-  public contactoPeticionEnviado: boolean = false;
 
 
   constructor(private empresasService: EmpresasService) {
@@ -33,18 +32,6 @@ export class IndexComponent {
     this.counter++;
   }
 
-  sendForm(values: any) {
-    console.log(values);
-    this.empresasService.sendContactForm(values).subscribe(
-      response => {
-        console.log('enviado');
-        this.contactoPeticionEnviado = true;
-      },
-      error => {
-        console.log('error al enviar');
-        this.contactoPeticionEnviado = false;
-      }
-    )
-  }
+
 }
 

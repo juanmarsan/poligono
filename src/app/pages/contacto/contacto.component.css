@@ -27,35 +27,6 @@ filter: grayscale(-50%);
 
 
 
-.formContactoForm{
-    width: 4%;
-    float:left;
-    margin: 4% 7% 0% 0%;
-}
-
-.formContacto hr {
-    border: 0; 
-    height: 0; 
-    border-top: 4px double black; 
-    text-align:center;
-    width: 95%;
-        margin: 0% 7% 0% 0%;
-    float: left;
-}
-.formContacto hr:after {
-    position: relative; 
-    top: -22px; content:"\25cf\25cf\25cf"; 
-    font-size: 34px;
-    line-height: 34px; 
-    color: black;
-    width: 95%;
-        margin: 0% 7% 0% 0%;
-}
-.contactarForm{
-float: left;
-width: 7%;
-margin-right: 10px;
-}
 
 .formu{
 	background: white none repeat scroll 0 0;
