@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {EmpresasService} from '../../../core/domain/services/empresasService';
 
 @Component({
   selector: 'contacto-directive',
@@ -17,12 +18,25 @@ export class ContactoComponent {
   public horario : string = ' L -V de 10:00 a 12:00';
   public formularioContacto : string = 'FORMULARIO DE CONTACTO';
   public counter: number = 0;
+  public contactoPeticionEnviado: boolean = false;
 
-  addNumber(){
+  constructor(private empresasService: EmpresasService) {}
+
+  addNumber() {
     this.counter++;
   }
 
-  sendForm(){
-  
+  sendForm(values: any) {
+    console.log(values);
+    this.empresasService.sendContactForm(values).subscribe(
+      response => {
+        console.log('enviado');
+        this.contactoPeticionEnviado = true;
+      },
+      error => {
+        console.log('error al enviar');
+        this.contactoPeticionEnviado = false;
+      }
+    )
   }
 }

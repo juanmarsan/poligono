@@ -9,9 +9,18 @@ import {EmpresasService} from "../../../core/domain/services/empresasService";
 })
 export class IndexComponent {
   public title : string = 'Inicio';
-
- public empresas: any;
-
+  public empresas: any;
+  public services : string = 'SERVICIOS QUE ORFRECEMOS';
+  public servicesLittle : string = 'A SU DISPOSICIÓN';
+  public businessTitle : string = 'ALGUNAS DE LAS EMPRESAS';
+  public counter: number = 0;
+  public indexContacto : string = 'Puede contactar por cualquiera de los métodos que aparecen en esta página. Si lo desea, también puede hacerlo rellenando el siguiente formulario. Sus datos serán tratados en cumplimiento con lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal.';
+  public lugar : string = 'Ayuntamiento. Plaza Palacio 1';
+  public poblacion : string = '46812 - Aielo de Malferit';
+  public telefono : string = '666 999 111';
+  public mail : string = 'msil@mail.mail';
+  public horario : string = ' L -V de 10:00 a 12:00';
+  public contactoPeticionEnviado: boolean = false;
 
 
   constructor(private empresasService: EmpresasService) {
@@ -20,25 +29,22 @@ export class IndexComponent {
     });
   }
 
-  public services : string = 'SERVICIOS QUE ORFRECEMOS';
-  public servicesLittle : string = 'A SU DISPOSICIÓN';
-  public businessTitle : string = 'ALGUNAS DE LAS EMPRESAS';
-
-  
-
- public indexContacto : string = 'Puede contactar por cualquiera de los métodos que aparecen en esta página. Si lo desea, también puede hacerlo rellenando el siguiente formulario. Sus datos serán tratados en cumplimiento con lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal.';
-
-  public lugar : string = 'Ayuntamiento. Plaza Palacio 1';
-  public poblacion : string = '46812 - Aielo de Malferit';
-  public telefono : string = '666 999 111';
-  public mail : string = 'msil@mail.mail';
-  public horario : string = ' L -V de 10:00 a 12:00';
-
-   
-  public counter: number = 0;
-
-  addNumber(){
+  addNumber() {
     this.counter++;
+  }
+
+  sendForm(values: any) {
+    console.log(values);
+    this.empresasService.sendContactForm(values).subscribe(
+      response => {
+        console.log('enviado');
+        this.contactoPeticionEnviado = true;
+      },
+      error => {
+        console.log('error al enviar');
+        this.contactoPeticionEnviado = false;
+      }
+    )
   }
 }
 

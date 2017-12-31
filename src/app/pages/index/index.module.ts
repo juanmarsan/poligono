@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { routes } from './detail.routes';
 import { IndexComponent } from './index.component';
+import {FormsModule} from '@angular/forms';
 
 console.log('`Detail` bundle loaded asynchronously');
 
@@ -14,6 +15,7 @@ console.log('`Detail` bundle loaded asynchronously');
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    FormsModule
   ],
 })
 export class IndexModule {

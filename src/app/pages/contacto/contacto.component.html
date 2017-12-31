@@ -6,13 +6,13 @@
 		<div class="textoContacto">
 			<div>
 				{{textoContacto}}
-			</div>	
+			</div>
 			<div class="relleno">
 				<div class="imagenContacto">
 					<img src="/assets/img/Palau.jpg" >
 				</div>
 				<div class="dondeContactar">
-					<p><img class="contactarForm" src="/assets/img/Iconos/location.png">{{ lugar }} <br> 
+					<p><img class="contactarForm" src="/assets/img/Iconos/location.png">{{ lugar }} <br>
 					 	{{ poblacion }}</p>
 					<p><img class="contactarForm" src="/assets/img/Iconos/phone.png">{{ telefono }}</p>
 					<p><img class="contactarForm" src="/assets/img/Iconos/email.png">{{ mail }}</p>
@@ -26,14 +26,18 @@
 		<img class="formContactoForm" src="/assets/img/Icono/FormColor.png">
 		<h2>{{formularioContacto}}</h2>
 		<hr>
-		
-		<form>
-		  <input class="formu" type="text" name="name" placeholder="Nombre" name="nombre"><br>
-		  <input class="formu" type="text" name="email" placeholder="Email" name="email"><br>
-		  <input class="formu" type="text" name="telefono" placeholder="Telefono" name="telefono"><br>
-		  <textarea class="formu" name="comment" placeholder="Comentarios" name="comentarios"></textarea><br>
-		  <input class="btnEnvio" type=image src="/assets/img/botonEnvio.png" (click)="sendForm()">
+
+		<form #myForm="ngForm" (ngSubmit)="sendForm(myForm.value)" *ngIf="! contactoPeticionEnviado">
+		  <input class="formu" type="text" name="name" placeholder="Nombre" name="nombre"  ngModel required><br>
+		  <input class="formu" type="text" name="email" placeholder="Email" name="email"  ngModel required><br>
+		  <input class="formu" type="text" name="telefono" placeholder="Telefono" name="telefono"  ngModel required><br>
+		  <textarea class="formu" name="comment" placeholder="Comentarios" name="comentarios"  ngModel required></textarea><br>
+      <button type="submit" [disabled]="! myForm.form.valid"  name="send" >send</button>
 		</form>
+
+    <div *ngIf="contactoPeticionEnviado">
+      FORMULARIO ENVIADO, LES CONTACTAREMOS PRONTO
+    </div>
 	</div>
 </div>
 
