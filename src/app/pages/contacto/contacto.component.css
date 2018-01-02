@@ -19,11 +19,6 @@ filter: grayscale(-50%);
     margin-top: 80px;
 }
 
-
-
-
-
-
 .formu{
 	background: white none repeat scroll 0 0;
     border-color: #d0d7de;
@@ -71,3 +66,13 @@ filter: grayscale(-50%);
 .relleno{
 	margin-top: 5%;
 }
+
+
+
+
+.mapa iframe{
+  width: 100%;
+  height: 400px;
+  margin-top: 100px;
+}
+

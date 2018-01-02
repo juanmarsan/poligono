@@ -4,6 +4,22 @@
 	</div>
 
   <div class="content-wrapper">
+	  <div class="slider">
+				<ul>
+					<li>
+					  <img src="/assets/img/GaleriaInicio/aielo.jpg" alt="">
+					 </li>
+					<li>
+					  <img src="/assets/img/GaleriaInicio/puente.jpg" alt="">
+					</li>
+					<li>
+					 <img src="/assets/img/GaleriaInicio/pueblo.jpg" alt="">
+					</li>
+					<li>
+					 <img src="/assets/img/GaleriaInicio/eixample.jpg" alt="">
+					</li>
+			</ul>
+		</div>
   	<div class="content-information">
   		<div class="title-information">
   			<h2>{{ services }}</h2>
@@ -16,34 +32,13 @@
   		</div>
   	</div>
 
-  	<div class="content-business">
-  		<div class="title-business">
-  		</div>
+  	<div class="content-business" *ngFor="let empresa of empresas" id="{{empresa.id}}">>
+  		<a href="">
+			<img src="/assets/img/Noticias/{{empresa.imagen}}" >
+			<p>{{empresa.title}}</p>
+			<p>{{empresa.descripcion}}</p>
+	    	<p>{{empresa.fecha}}</p>
+		</a>
   	</div>
-
-
-
-	<div class="indexContacto">
-		<div class="contentIndex">
-			{{indexContacto}}
-		</div>
-		<div class="relleno">
-			<div class="imagenContacto">
-				<img src="/assets/img/mapa.png" >
-			</div>
-			<div class="dondeContactar">
-				<p>{{ lugar }} <br>
-				 	{{ poblacion }}</p>
-				<p>{{ telefono }}</p>
-				<p>{{ mail }}</p>
-				<p>{{ horario }}</p>
-			</div>
-		</div>
-	</div>
-
-
-	<app-contacto-form></app-contacto-form>
-
-<button (click)="addNumber()">add</button>--->{{counter}}
-
+  	
 </div>
