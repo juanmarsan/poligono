@@ -19,11 +19,7 @@ filter: grayscale(-50%);
     margin-top: 80px;
 }
 
-.formContacto{
-    width: 41%;
-    float:left;
-    margin: 0% 7% 0% 2%;
-}
+
 
 
 
@@ -44,31 +40,6 @@ filter: grayscale(-50%);
 }
 
 
-.formContacto textarea{
-    height: 70px;
-}
-
-.btnEnvio{
-	-moz-user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    color: #ffffff;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 24px;
-    margin-bottom: 0;
-    padding: 6px 0;
-    margin-top: 20px;
-    text-align: center;
-    touch-action: manipulation;
-    transition: all 0.3s ease 0s;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: 42%;
-}
 .textoContacto{
 	width: 41%;
 	float:left;
@@ -92,6 +63,9 @@ filter: grayscale(-50%);
 
 .dondeContactar p{
     padding: 3%;
+}
+.dondeContactar p img{
+    width: 8%;
 }
 
 .relleno{

@@ -1,7 +1,7 @@
 .formContactoForm{
-  width: 4%;
+  width: 25px;
   float:left;
-  margin: 4% 7% 0% 0%;
+  margin: 4px 2% 0% 0%;
 }
 
 .formContacto hr {
@@ -9,8 +9,8 @@
   height: 0;
   border-top: 4px double black;
   text-align:center;
-  width: 95%;
-  margin: 0% 7% 0% 0%;
+  width: 42%;
+  margin: 0% 7% 4% 0%;
   float: left;
 }
 .formContacto hr:after {
@@ -19,11 +19,43 @@
   font-size: 34px;
   line-height: 34px;
   color: black;
-  width: 95%;
-  margin: 0% 7% 0% 0%;
+  width: 42%;
+  margin: 0% 7% 3% 0%;
 }
 .contactarForm{
   float: left;
   width: 7%;
   margin-right: 10px;
+}
+
+
+
+.formu{
+    width: 42%;
+    margin: 0% 7% 1% 0%;
+}
+.formContacto textarea{
+    height: 70px;
+}
+
+.btnEnvio{
+  -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    margin-bottom: 0;
+    padding: 6px 0;
+    margin-top: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: all 0.3s ease 0s;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 42%;
 }
