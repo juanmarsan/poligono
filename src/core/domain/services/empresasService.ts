@@ -7,10 +7,10 @@ import {IEmpresasService} from './contracts/iEmpresasService';
 import {Contacto} from '../models/contacto';
 
 @Injectable()
-export class EmpresasService implements IEmpresasService{
+export class EmpresasService implements IEmpresasService {
   misEmpresas: Array<Empresa> =  [];
-  url: string = 'http://127.0.0.1/poligono/verEmpresa.php';
-  urlPostContato: string = 'http://127.0.0.1/poligono/sendContacto.php';
+  url: string = 'http://www.web-salva.com/juan/verEmpresa.php';
+  urlPostContato: string = 'http://www.web-salva.com/juan/sendContacto.php';
 
   constructor(private http: HttpClient) {}
 

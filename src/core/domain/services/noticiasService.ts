@@ -8,7 +8,7 @@ import {INoticiasService} from './contracts/iNoticiasService';
 @Injectable()
 export class NoticiasService implements INoticiasService{
   misNoticias: Array<Noticia> =  [];
-  url: string = "http://127.0.0.1/poligono/verNoticia.php";
+  url: string = "http://www.web-salva.com/juan/verNoticia.php";
 
   constructor(private http: HttpClient) {}
 
