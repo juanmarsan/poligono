@@ -31,11 +31,25 @@
   			<div class="information-pointer"><h3>Formacion</h3></div>
   		</div>
   	</div>
-	<a href="" *ngFor="let empresa of empresas" id="{{empresa.id}}">
-  		<div class="content-business" id="{{empresa.id}}">
-			<img src="/assets/img/Empresas/{{empresa.photo}}" >
-			<p>{{empresa.title}}</p>
-	    	<p class="sector">{{empresa.sector}}</p>
+  	<div class="saludos">
+  		<h2>SALUDA EL ALCALDE</h2>
+  		<h3>JOSE LUIS JUAN PINTER</h3>
+  		<div class="contnt-saludo">
+  			<img src="/assets/img/alcalde.jpg" alt="AlcaldeFoto">
+  			<div>
+  				Aqui van unas palabras del alcalde sobre las empresas, proyectos, de los poligonos de Aielo de Malferit
+  			</div>
   		</div>
-  	</a>
+  	</div>
+  	<div class="content-business">
+  		<h2>ALGUNAS EMPRESAS</h2>
+		<a href="" *ngFor="let empresa of empresas" id="{{empresa.id}}">
+	  		<div class="business" id="{{empresa.id}}">
+				<img src="/assets/img/Empresas/{{empresa.photo}}" >
+				<p>{{empresa.title}}</p>
+		    	<div class="sector">{{empresa.sector}}</div>
+	  		</div>
+	  	</a>
+	  	<h3>Ver todas las empresas</h3>
+	</div>
 </div>
