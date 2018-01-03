@@ -32,12 +32,12 @@
   		</div>
   	</div>
 
-  	<div class="content-business" *ngFor="let empresa of empresas" id="{{empresa.id}}">>
+  	<div class="content-business" *ngFor="let empresa of empresas" id="{{empresa.id}}">
   		<a href="">
-			<img src="/assets/img/Noticias/{{empresa.imagen}}" >
+			<img src="/assets/img/Empresas/{{empresa.photo}}" >
 			<p>{{empresa.title}}</p>
 			<p>{{empresa.descripcion}}</p>
-	    	<p>{{empresa.fecha}}</p>
+	    	<p>{{empresa.sector}}</p>
 		</a>
   	</div>
   	

@@ -74,6 +74,7 @@ filter: grayscale(-50%);
 
 .slider img {
   width: 100%;
+  height: 500px;
 }
 
 @keyframes cambio {
