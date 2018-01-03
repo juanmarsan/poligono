@@ -90,3 +90,20 @@ filter: grayscale(-50%);
   75% {margin-left: -300%;}
   100% {margin-left: -300%;}
 }
+
+
+.content-business{
+  float:left;
+  width: 31%;
+  text-align: center;
+  padding: 100px 1% 0% 1%;
+}
+
+.content-business img{
+  width: 300px;
+  height: 140px;
+}
+
+.sector{
+  background-color: orange;
+}
