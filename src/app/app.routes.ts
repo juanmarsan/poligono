@@ -2,14 +2,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { NoContentComponent } from './pages/no-content/no-content.component';
 import { NgModule } from '@angular/core';
-import {IndexComponent} from "./pages/index/index.component";
+import {NoticiaDetalleComponent} from "./pages/noticias/noticia-detalle/noticia-detalle.component";
+import {NoticiasComponent} from "./pages/noticias/noticias.component";
 
 
 const ROUTES: Routes = [
   { path: '',      component: ContactoComponent },
   { path: 'index', loadChildren: './pages/index/index.module#IndexModule',  data: { preload: false }},
-   { path: 'contacto', component: ContactoComponent },
-  { path: 'noticias', loadChildren: './pages/noticias/noticias.module#NoticiasModule',  data: { preload: false }},
+  { path: 'contacto', component: ContactoComponent },
+  { path: 'noticias',  component: NoticiasComponent},
+  {path:  'noticia/:id', component: NoticiaDetalleComponent},
   { path: '**',    component: NoContentComponent },
 ];
 

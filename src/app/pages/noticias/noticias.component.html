@@ -3,7 +3,7 @@
 </div>
 <div>
 	<div class="contenido" *ngFor="let noticia of noticias" id="{{noticia.id}}">
-		<a href="">
+    <a [routerLink]="['/noticia', noticia.id]">
 			<img src="/assets/img/Noticias/{{noticia.imagen}}" >
 			<p>{{noticia.title}}</p>
 			<p>{{noticia.descripcion}}</p>

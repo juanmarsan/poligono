@@ -11,6 +11,8 @@ import {EmpresasService} from '../core/domain/services/empresasService';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {SharedModule} from './shared/shared.module';
+import {NoticiaDetalleComponent} from "./pages/noticias/noticia-detalle/noticia-detalle.component";
+import {NoticiasComponent} from "./pages/noticias/noticias.component";
 
 
 
@@ -18,7 +20,9 @@ import {SharedModule} from './shared/shared.module';
   declarations: [
     AppComponent,
     ContactoComponent,
-    NoContentComponent
+    NoContentComponent,
+    NoticiaDetalleComponent,
+    NoticiasComponent
   ],
   imports: [
     BrowserModule,
