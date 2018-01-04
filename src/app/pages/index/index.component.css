@@ -1,22 +1,6 @@
 .contenedor{
     margin-top: 13%;
 }
-.big-title-wrapper{
-  background-color: aqua;
-  height: 200px;
-  width: 100%;
-  background-image: url("/assets/img/aieloPanoramica.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  -webkit-filter: grayscale(-50%);
-filter: grayscale(-50%);
-}
-
-.big-title-wrapper h2{
-	text-align: center;
-	line-height: 200px;
-	font-family: "Roboto Condensed",sans-serif;
-}
 
 .indexContacto{
   width: 100%;
@@ -28,6 +12,7 @@ filter: grayscale(-50%);
 
 .title-information h2,p{
   text-align: center;
+  margin-top: 17px;
 }
 
 .information-pointer{
@@ -91,8 +76,17 @@ filter: grayscale(-50%);
   100% {margin-left: -300%;}
 }
 
+
+.content-business{
+  width: 100%;
+  margin-top: -60px;
+}
+
 .content-business h2{
-  margin-top: 100px;
+  text-align: center;
+}
+.content-business h3{
+  margin-top: 60px;
   text-align: center;
 }
 
@@ -101,7 +95,7 @@ filter: grayscale(-50%);
   float:left;
   width: 31%;
   text-align: center;
-  padding: 100px 1% 0% 1%;
+  padding: 60px 1% 0% 1%;
 }
 
 .business img{
@@ -115,4 +109,30 @@ filter: grayscale(-50%);
   top: -197px;
   right: -61px;
   width: 30%;
+}
+
+
+.saludos{
+  width: 100%;
+      height: 530px;
+  margin-top: 275px;
+}
+.saludos h2{
+  text-align: center;
+}
+
+.saludos h4{
+  text-align: center;
+  margin-top: -20px;
+}
+
+.content-saludo img {
+  height: 300px;
+  float: left;
+  margin: 0% 2% 2% 7%;
+}
+
+.content-saludo div {
+  width: 70%;
+  float: left;
 }

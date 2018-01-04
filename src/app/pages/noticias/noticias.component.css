@@ -14,7 +14,7 @@
   background-color: aqua;
   height: 200px;
   width: 100%;
-  background-image: url("/assets/img/aieloPanoramica.jpg");
+  background-image: url("/assets/img/fondo.png");
   background-repeat: no-repeat;
   background-size: 100%;
   -webkit-filter: grayscale(-50%);
