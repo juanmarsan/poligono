@@ -1,8 +1,13 @@
 
-{{noticia?.id}}
-{{noticia?.title}}
+
+
 
 <br /><br /><br />
+
+<img src="/assets/img/Noticias/{{noticia?.imagen}}" >
+<p>{{noticia?.title}}</p>
+<p>{{noticia?.descripcion}}</p>
+<p>{{noticia?.fecha}}</p>
 <a [routerLink]="['/noticias']">
 volver
 </a>

@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 import 'rxjs/add/operator/switchMap';
 import {ActivatedRoute} from "@angular/router";
-import {Noticia} from "../../../../core/domain/models/noticia";
+import {Noticia} from '../../../../core/domain/models/noticia';
 import {NoticiasService} from "../../../../core/domain/services/noticiasService";
 
 
@@ -14,20 +14,18 @@ export class NoticiaDetalleComponent{
   public noticia: any;
   constructor(private route: ActivatedRoute,
               private noticiasService: NoticiasService){
-
-  }
-  ngOnInit() {
-
     this.route.params.subscribe(params => {
       console.log(params['id'])
       this.noticiasService.getNoticia(params['id']).subscribe(response => {
-        this.noticia = response;
+        this.noticia = response[0];
+        console.log(this.noticia)
       });
 
 
     });
   }
 
-  }
+
+
 
 }
