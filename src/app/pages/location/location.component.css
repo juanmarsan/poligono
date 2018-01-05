@@ -1,0 +1,56 @@
+.big-title-wrapper{
+  background-color: aqua;
+  height: 200px;
+  width: 100%;
+  background-image: url("/assets/img/fondo.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-filter: grayscale(-50%);
+filter: grayscale(-50%);
+}
+
+.big-title-wrapper h2{
+    text-align: center;
+    line-height: 200px;
+    font-family: "Roboto Condensed",sans-serif;
+}
+
+.content-wraper{
+    margin-top: 80px;
+}
+
+
+.content-business{
+  width: 100%;
+  margin-top: -60px;
+}
+
+.content-business h2{
+  text-align: center;
+}
+.content-business h3{
+  margin-top: 60px;
+  text-align: center;
+}
+
+
+.business{
+  float:left;
+  width: 31%;
+  text-align: center;
+  padding: 60px 1% 0% 1%;
+}
+
+.business img{
+  width: 300px;
+  height: 140px;
+}
+
+.sector{
+  background-color: orange;
+  position: relative;
+  top: -197px;
+  right: -61px;
+  width: 30%;
+}
+

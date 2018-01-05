@@ -1,13 +1,12 @@
+<div class="big-title-wrapper">
+	<h2>{{ title }}</h2>
+</div>
 
-
-
-
-<br /><br /><br />
-
-<img src="/assets/img/Noticias/{{noticia?.imagen}}" >
-<p>{{noticia?.title}}</p>
+<div class="noticia">
+<img src="/assets/img/Noticias/{{noticia?.photo}}" >
+<h1>{{noticia?.title}}</h1>
 <p>{{noticia?.descripcion}}</p>
 <p>{{noticia?.fecha}}</p>
-<a [routerLink]="['/noticias']">
-volver
-</a>
+<p>	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+</div>
+<a [routerLink]="['/noticias']"> Volver</a>

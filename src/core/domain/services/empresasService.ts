@@ -11,12 +11,18 @@ export class EmpresasService implements IEmpresasService {
   misEmpresas: Array<Empresa> =  [];
   url: string = 'http://www.web-salva.com/juan/verEmpresa.php';
   urlPostContato: string = 'http://www.web-salva.com/juan/sendContacto.php';
+  urlfilterName: string = 'http://www.web-salva.com/juan/verEmpresaOrderName.php';
 
   constructor(private http: HttpClient) {}
 
   getEmpresas() {
     return this.http.get(this.url).map(this.extractData);
   }
+
+  getEmpresasOrdName() {
+    return this.http.get(this.url).map(this.extractData);
+  }
+
   getEmpresa(i: number): Empresa {
     return i >= 0 && this.misEmpresas[i];
   }

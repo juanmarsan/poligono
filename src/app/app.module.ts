@@ -13,7 +13,7 @@ import {FormsModule} from '@angular/forms';
 import {SharedModule} from './shared/shared.module';
 import {NoticiaDetalleComponent} from "./pages/noticias/noticia-detalle/noticia-detalle.component";
 import {NoticiasComponent} from "./pages/noticias/noticias.component";
-
+import {LocationComponent} from "./pages/location/location.component";
 
 
 @NgModule({
@@ -22,7 +22,8 @@ import {NoticiasComponent} from "./pages/noticias/noticias.component";
     ContactoComponent,
     NoContentComponent,
     NoticiaDetalleComponent,
-    NoticiasComponent
+    NoticiasComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,

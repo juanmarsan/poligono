@@ -7,10 +7,11 @@ import {NoticiasService} from "../../../../core/domain/services/noticiasService"
 
 @Component({
   selector: 'noticias-detalle-component',
-  templateUrl: './noticia-detalle.component.html'
+  templateUrl: './noticia-detalle.component.html',
+  styleUrls: ['./noticia-detalle.component.css']
 })
 export class NoticiaDetalleComponent{
-
+  public title : string = 'Noticias';
   public noticia: any;
   constructor(private route: ActivatedRoute,
               private noticiasService: NoticiasService){
