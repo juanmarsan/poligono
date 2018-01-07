@@ -1,21 +1,26 @@
 <div class="contacto">
-	<div class="big-title-wrapper">
-		<h2>{{ title }}</h2>
-	</div>
-	<div class="content-wraper">
-	  		<div class="content-business">
-  				<h2>Filtros para EMPRESAS</h2>
-  				<button (click)="addNumber()">add</button>--->{{counter}}
-  				 <select>
-					<option value="ordNombre" (click)="filterName()">Por Nombre</option>
-					<option value="ordCategoria" (click)="filterCategory()">Por Categoria</option>
-				</select>
-				<div class="business" *ngFor="let empresa of empresas" id="{{empresa.id}}">
-					<img src="/assets/img/Empresas/{{empresa.photo}}" >
-					<p>{{empresa.title}}</p>
-		    		<div class="sector">{{empresa.sector}}</div>
-	  			</div>
-			</div>
-	</div>
+  <div class="big-title-wrapper">
+    <h2>{{ title }}</h2>
+  </div>
+  <div class="content-wraper">
+    <div class="content-business">
+      <h2>Filtros para EMPRESAS</h2>
+      <button (click)="addNumber()">add</button>
+      --->{{counter}}
+
+      <select name="ordenarTipo" (change)="filterName($event.target.value)">
+        <option [disabled]="true" [selected]="true">Select Option</option>
+        <option (click)="filterName()" value="ordNombre">Por Nombre</option>
+        <option (click)="filterCategory()" value="ordCategoria">Por Categoria</option>
+      </select>
+
+
+      <div class="business" *ngFor="let empresa of empresas | OrdenarEmpresasPipe:ordenarTipo " id="{{empresa.id}}">
+        <img src="/assets/img/Empresas/{{empresa.photo}}">
+        <p>{{empresa.title}}</p>
+        <div class="sector">{{empresa.sector}}</div>
+      </div>
+    </div>
+  </div>
 </div>
 
