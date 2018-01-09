@@ -23,9 +23,4 @@ export class LocationComponent {
     console.log(event);
     this.ordenarTipo = event;
   }
-
-  addNumber() {
-    this.counter++;
-  }
-
 }
