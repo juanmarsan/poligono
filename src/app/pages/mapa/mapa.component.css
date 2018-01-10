@@ -19,3 +19,8 @@ filter: grayscale(-50%);
     margin-top: 80px;
 }
 
+
+
+agm-map {
+  height: 300px;
+}

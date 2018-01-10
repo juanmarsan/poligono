@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app.routes';
-import { AgmCoreModule } from 'angular2-googlr-maps/core';
+
 
 import { AppComponent } from './app.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
@@ -16,6 +16,8 @@ import {NoticiaDetalleComponent} from "./pages/noticias/noticia-detalle/noticia-
 import {NoticiasComponent} from "./pages/noticias/noticias.component";
 import {LocationComponent} from "./pages/location/location.component";
 import {MapaComponent} from "./pages/mapa/mapa.component";
+import {AgmCoreModule} from "@agm/core";
+
 
 @NgModule({
   declarations: [
@@ -25,17 +27,17 @@ import {MapaComponent} from "./pages/mapa/mapa.component";
     NoticiaDetalleComponent,
     NoticiasComponent,
     LocationComponent,
-    MapaComponent,
-    AgmCoreModule.forRoot({
-      apiKey: 'IzaSyAzB64lkRYzeG5wiOa8r-Oc73nwD2ujSeU'
-    })
+    MapaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyA_n0AE25IaRXb_bqCPopZxXiuVOpTglMk'
+    })
   ],
   providers: [NoticiasService, EmpresasService],
   bootstrap: [AppComponent]

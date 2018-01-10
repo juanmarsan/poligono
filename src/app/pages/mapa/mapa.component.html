@@ -7,21 +7,10 @@
       <h2>Filtros para EMPRESAS</h2>
      </div>
      <div class="mapa">
-        <sebm-google-map [latitude]="lati" 
-        [longitude] ="longi"
-        [disableDefaultUI]=false
-        [zoomControl] ="false"
-        (mapClick)=maoCliqueado($event)>
-            <sebm-google-map-marker
-            *ngfor="let m of markers;let i - index"
-            (markerClick)="marcadorCliqueado(m,i)"
-            [latitude]="m.lati" 
-            [longitude] ="m.longi">
-            [markerDraggable]="m.arrastrable"
-            (dragEnd)="posicionFinalMarcador(m,$event)"
-            </sebm-google-map-marker>
-        </sebm-google-map>
-     </div> 	
+       <agm-map [latitude]="lati" [longitude]="longi" [zoom]="13">
+         <agm-marker *ngFor="let m of markers; " [latitude]="m.lati" [longitude]="m.longi"></agm-marker>
+       </agm-map>
+     </div>
   </div>
 </div>
 
