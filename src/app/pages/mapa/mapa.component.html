@@ -1,0 +1,27 @@
+<div class="contacto">
+  <div class="big-title-wrapper">
+    <h2>{{ title }}</h2>
+  </div>
+  <div class="content-wraper">
+    <div class="content-business">
+      <h2>Filtros para EMPRESAS</h2>
+     </div>
+     <div class="mapa">
+        <sebm-google-map [latitude]="lati" 
+        [longitude] ="longi"
+        [disableDefaultUI]=false
+        [zoomControl] ="false"
+        (mapClick)=maoCliqueado($event)>
+            <sebm-google-map-marker
+            *ngfor="let m of markers;let i - index"
+            (markerClick)="marcadorCliqueado(m,i)"
+            [latitude]="m.lati" 
+            [longitude] ="m.longi">
+            [markerDraggable]="m.arrastrable"
+            (dragEnd)="posicionFinalMarcador(m,$event)"
+            </sebm-google-map-marker>
+        </sebm-google-map>
+     </div> 	
+  </div>
+</div>
+

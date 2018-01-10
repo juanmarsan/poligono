@@ -5,16 +5,20 @@
   <div class="menu">
       <nav>
         <a [routerLink]=" ['./contacto'] "
-          routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+          routerLinkActive="active" [routerLinkActiveOptions]= "{exact: false}">
           CONTACTO
         </a>
          <a [routerLink]=" ['./noticias'] "
-          routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+          routerLinkActive="active" [routerLinkActiveOptions]= "{exact: false}">
           NOTICIAS
         </a>
         <a [routerLink]=" ['./location'] "
-          routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+          routerLinkActive="active" [routerLinkActiveOptions]= "{exact: false}">
           EMPRESAS
+        </a> 
+        <a [routerLink]=" ['./mapa'] "
+          routerLinkActive="active" [routerLinkActiveOptions]= "{exact: false}">
+          MAPA
         </a>
         <a [routerLink]=" ['./index'] "
           routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">

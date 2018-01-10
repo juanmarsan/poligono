@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app.routes';
+import { AgmCoreModule } from 'angular2-googlr-maps/core';
 
 import { AppComponent } from './app.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
@@ -14,7 +15,7 @@ import {SharedModule} from './shared/shared.module';
 import {NoticiaDetalleComponent} from "./pages/noticias/noticia-detalle/noticia-detalle.component";
 import {NoticiasComponent} from "./pages/noticias/noticias.component";
 import {LocationComponent} from "./pages/location/location.component";
-
+import {MapaComponent} from "./pages/mapa/mapa.component";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,11 @@ import {LocationComponent} from "./pages/location/location.component";
     NoContentComponent,
     NoticiaDetalleComponent,
     NoticiasComponent,
-    LocationComponent
+    LocationComponent,
+    MapaComponent,
+    AgmCoreModule.forRoot({
+      apiKey: 'IzaSyAzB64lkRYzeG5wiOa8r-Oc73nwD2ujSeU'
+    })
   ],
   imports: [
     BrowserModule,

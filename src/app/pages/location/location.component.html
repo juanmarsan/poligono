@@ -11,7 +11,7 @@
 	        <option (click)="filterName()" value="ordNombre">Por Nombre</option>
 	        <option (click)="filterCategory()" value="ordCategoria">Por Categoria</option>
 	      </select>
- 		</div>
+ 		</div> 
 
       <div class="business" *ngFor="let empresa of empresas | OrdenarEmpresasPipe:ordenarTipo " id="{{empresa.id}}">
         <div class="businessEmpresa">
@@ -21,10 +21,12 @@
         <img src="/assets/img/Empresas/{{empresa.photo}}">
         <div class="business-title">
           <div class="dondeContactar">
-            <p><img class="contactarForm" src="/assets/img/Iconos/location.png"> sadsafasf</p>
-            <p><img class="contactarForm" src="/assets/img/Iconos/phone.png">asfsaffsaf</p>
-            <p><img class="contactarForm" src="/assets/img/Iconos/email.png">fsafsaf</p>
-            <p><img class="contactarForm" src="/assets/img/Iconos/horario.png">fasfsafs</p>
+            
+            <p><img class="contactarForm" src="/assets/img/Iconos/poligono.png"> {{empresa.poligono}}</p>
+            <p><img class="contactarForm" src="/assets/img/Iconos/location.png"> {{empresa.adress}}</p>
+            <p><img class="contactarForm" src="/assets/img/Iconos/phone.png">{{empresa.telefono}}</p>
+            <p><img class="contactarForm" src="/assets/img/Iconos/email.png">{{empresa.email}}</p>
+            <p><img class="contactarForm" src="/assets/img/Iconos/horario.png">{{empresa.web}}</p>
           </div>
           <div class="mapa">
             <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12425.209461574317!2d-0.5920038017453222!3d38.871323446386036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spoligono+industrial+aielo+de+malferit!5e0!3m2!1ses!2ses!4v1515486586412" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
