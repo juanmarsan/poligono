@@ -12,7 +12,7 @@ export class MapaComponent {
 zoom : number = 10;
 lati : number = 38.8795955;
 longi : number = -0.5966299;
-public empresas: Empresa[];
+public empresas: any;
 public markers : Marker[] ;
 
   constructor(private empresasService: EmpresasService) {
