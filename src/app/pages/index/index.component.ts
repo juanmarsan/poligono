@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Empresa} from "../../../core/domain/models/empresa";
-import {EmpresasService} from "../../../core/domain/services/empresasService";
+import {Poligono} from "../../../core/domain/models/poligono";
+import {PoligonosService} from "../../../core/domain/services/poligonosService";
 
 @Component({
   selector: 'index-directive',
@@ -9,7 +9,7 @@ import {EmpresasService} from "../../../core/domain/services/empresasService";
 })
 export class IndexComponent {
   public title : string = 'Inicio';
-  public empresas: any;
+  public poligonos: any;
   public services : string = 'SERVICIOS QUE ORFRECEMOS';
   public servicesLittle : string = 'A SU DISPOSICIÓN';
   public businessTitle : string = 'ALGUNAS DE LAS EMPRESAS';
@@ -22,9 +22,9 @@ export class IndexComponent {
   public horario : string = ' L -V de 10:00 a 12:00';
 
 
-  constructor(private empresasService: EmpresasService) {
-    this.empresasService.getEmpresas().subscribe(response => {
-      this.empresas = response;
+  constructor(private poligonosService: PoligonosService) {
+    this.poligonosService.getPoligonos().subscribe(response => {
+      this.poligonos = response;
     });
   }
 

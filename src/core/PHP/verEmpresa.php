@@ -3,7 +3,7 @@
 	$con = mysql_connect("websalvaxzjuan.mysql.db", "websalvaxzjuan", "Juanito123"); 
 	mysql_select_db("websalvaxzjuan", $con);
 	
-		$sql= "SELECT e.id, e.nombre, s.nombre as 'id_sector', e.direccion,p.nombre as 'id_poligono', e.telefono, e.movil, e.fax, e.email, e.web, e.descripcion, e.foto FROM empresa e INNER JOIN sector s on s.id=e.id_sector INNER JOIN poligono p on p.id=e.id_poligono ";
+		$sql= "SELECT e.id, e.nombre, s.nombre as 'id_sector', e.direccion,p.nombre as 'id_poligono', e.telefono, e.movil, e.fax, e.email, e.web, e.descripcion, e.foto, e.lati, e.longi FROM empresa e INNER JOIN sector s on s.id=e.id_sector INNER JOIN poligono p on p.id=e.id_poligono ";
 
 
 		
@@ -25,6 +25,8 @@
 			$jsonarray[$i]['web'] = utf8_encode($row['web']);
 			$jsonarray[$i]['description'] = utf8_encode($row['descripcion']);
 			$jsonarray[$i]['photo'] = utf8_encode($row['foto']);
+			$jsonarray[$i]['lati'] = utf8_encode($row['lati']);
+			$jsonarray[$i]['longi'] = utf8_encode($row['longi']);
 			$i++;
 			$vacio=false;
 		}

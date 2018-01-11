@@ -17,7 +17,7 @@ import {NoticiasComponent} from "./pages/noticias/noticias.component";
 import {LocationComponent} from "./pages/location/location.component";
 import {MapaComponent} from "./pages/mapa/mapa.component";
 import {AgmCoreModule} from "@agm/core";
-
+import {PoligonosService} from '../core/domain/services/poligonosService';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,7 @@ import {AgmCoreModule} from "@agm/core";
       apiKey: 'AIzaSyA_n0AE25IaRXb_bqCPopZxXiuVOpTglMk'
     })
   ],
-  providers: [NoticiasService, EmpresasService],
+  providers: [NoticiasService, EmpresasService, PoligonosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

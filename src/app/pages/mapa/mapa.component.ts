@@ -26,6 +26,12 @@ public markers : Marker[] ;
         longi :-0.5797139,
         arrastrable:false,
       },
+        {
+        nombre : 'Vidrios San Miguel',
+        lati :38.884192,
+        longi : -0.583443,
+        arrastrable:false,
+      },
     ]
   }
 
