@@ -13,6 +13,10 @@ export class EmpresasService implements IEmpresasService {
   urlPostContato: string = 'http://www.web-salva.com/juan/sendContacto.php';
   urlfilterName: string = 'http://www.web-salva.com/juan/verEmpresaOrderName.php';
 
+
+  urlinsert: string = 'http://www.web-salva.com/juan/insertarEmpresa.php';
+
+
   constructor(private http: HttpClient) {}
 
   getEmpresas() {
@@ -31,6 +35,12 @@ export class EmpresasService implements IEmpresasService {
     console.log(values);
     let body = JSON.stringify(values);
     return this.http.post(this.urlPostContato, body, {}).map(this.extractData);
+  }
+
+  insertEmpresa(values: Empresa) {
+    console.log(values);
+    let body = JSON.stringify(values);
+    return this.http.post(this.urlinsert, body, {}).map(this.extractData);
   }
 
   private extractData(res: Response) {

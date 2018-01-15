@@ -5,9 +5,22 @@
 
   <form #myForm="ngForm" (ngSubmit)="sendForm(myForm.value)" *ngIf="! contactoPeticionEnviado">
     <input class="formu" type="text" name="nombre" placeholder="Nombre" name="nombre"  ngModel required><br>
-    <input class="formu" type="text" name="email" placeholder="Email" name="email"  ngModel required><br>
+    <select name="sector" (change)="filterName($event.target.value)">
+              <option [disabled]="true" [selected]="true">Filtrar Empresas</option>
+    </select>
+    <input class="formu" type="text" name="direccion" placeholder="Direccion" name="direccion"  ngModel required><br>
+    <select name="sector" (change)="filterName($event.target.value)">
+      <option [disabled]="true" [selected]="true">Filtrar Empresas</option>
+    </select>
     <input class="formu" type="text" name="telefono" placeholder="Telefono" name="telefono"  ngModel required><br>
+    <input class="formu" type="text" name="movil" placeholder="Movil" name="movil"  ngModel required><br>
+    <input class="formu" type="text" name="email" placeholder="Email" name="web"  ngModel required><br>
+    <input class="formu" type="text" name="web" placeholder="Web" name="telefono"  ngModel required><br>
     <textarea class="formu" name="comment" placeholder="comentarios" name="Comentarios"  ngModel required></textarea><br>
+    Foto
+    <input class="formu" type="text" name="lati" placeholder="Lattud" name="lati"  ngModel required><br>
+    <input class="formu" type="text" name="longi" placeholder="Longitud" name="longi"  ngModel required><br>
+
     <button class="btnEnvio" type="submit" [disabled]="! myForm.form.valid"  name="send" >
       <img class="imagenEnvio" src="/assets/img/btnEnviar.png">
     </button>

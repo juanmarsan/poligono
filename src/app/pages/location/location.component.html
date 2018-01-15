@@ -10,11 +10,7 @@
             <option [disabled]="true" [selected]="true">Filtrar Empresas</option>
             <option (click)="filterName()" value="ordNombre">Por Nombre</option>
             <option (click)="filterCategory()" value="ordCategoria">Por Categoria</option>
-          </select>
-          <select name="ordenarTipo" (change)="filterName($event.target.value)">
-            <option [disabled]="true" [selected]="true">Filtrar Empresas</option>
-            <option (click)="filterName()" value="ordNombre">Por Nombre</option>
-            <option (click)="filterCategory()" value="ordCategoria">Por Categoria</option>
+            <option (click)="filterCategory()" value="ordPoligono">Por Poligonos</option>
           </select>
         </div>
 
@@ -26,7 +22,6 @@
         <img src="/assets/img/Empresas/{{empresa.photo}}">
         <div class="business-title">
           <div class="dondeContactar">
-
             <p><img class="contactarForm" src="/assets/img/Iconos/poligono.png"> {{empresa.poligono}}</p>
             <p><img class="contactarForm" src="/assets/img/Iconos/location.png"> {{empresa.adress}}</p>
             <p><img class="contactarForm" src="/assets/img/Iconos/phone.png">{{empresa.telefono}}</p>

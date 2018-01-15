@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Empresa} from '../../../core/domain/models/empresa';
 import {EmpresasService} from '../../../core/domain/services/empresasService';
 
 @Component({

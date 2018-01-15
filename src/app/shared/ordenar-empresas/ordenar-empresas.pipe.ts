@@ -26,6 +26,17 @@ export class OrdenarEmpresasPipe implements PipeTransform {
         }
       });
     }
-    return values;
-  }
+    else if(ordenarPor == 'ordPoligono'){
+      values.sort((a: any, b: any) => {
+        if (a.poligono < b.poligono) {
+          return -1;
+        } else if (a.poligono > b.poligono) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
+    }
+return values;
+}
 }

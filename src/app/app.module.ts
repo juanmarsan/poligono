@@ -15,6 +15,7 @@ import {SharedModule} from './shared/shared.module';
 import {NoticiaDetalleComponent} from "./pages/noticias/noticia-detalle/noticia-detalle.component";
 import {NoticiasComponent} from "./pages/noticias/noticias.component";
 import {LocationComponent} from "./pages/location/location.component";
+import {SendDataComponent} from "./pages/sendData/sendData.component";
 import {MapaComponent} from "./pages/mapa/mapa.component";
 import {AgmCoreModule} from "@agm/core";
 import {PoligonosService} from '../core/domain/services/poligonosService';
@@ -27,7 +28,8 @@ import {PoligonosService} from '../core/domain/services/poligonosService';
     NoticiaDetalleComponent,
     NoticiasComponent,
     LocationComponent,
-    MapaComponent
+    MapaComponent,
+    SendDataComponent
   ],
   imports: [
     BrowserModule,
