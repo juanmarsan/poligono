@@ -6,7 +6,7 @@ import {Injectable} from '@angular/core';
 import {IPoligonosService} from './contracts/iPoligonosService';
 
 @Injectable()
-export class IPoligonosService implements IPoligonosService {
+export class PoligonosService implements IPoligonosService {
   url: string = 'http://www.web-salva.com/juan/verPoligono.php';
 
   constructor(private http: HttpClient) {}

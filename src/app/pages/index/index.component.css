@@ -48,7 +48,7 @@
   display: flex;
   padding: 0;
   width: 400%;
-  
+
   animation: cambio 20s infinite alternate linear;
 }
 
@@ -65,13 +65,13 @@
 @keyframes cambio {
   0% {margin-left: 0;}
   20% {margin-left: 0;}
-  
+
   25% {margin-left: -100%;}
   45% {margin-left: -100%;}
-  
+
   50% {margin-left: -200%;}
   70% {margin-left: -200%;}
-  
+
   75% {margin-left: -300%;}
   100% {margin-left: -300%;}
 }
@@ -103,12 +103,10 @@
   height: 140px;
 }
 
-.sector{
-  background-color: orange;
-  position: relative;
-  top: -197px;
-  right: -61px;
-  width: 30%;
+.poligonos{
+  width: 100%;
+  height: 230px;
+  margin: 0 auto;
 }
 
 

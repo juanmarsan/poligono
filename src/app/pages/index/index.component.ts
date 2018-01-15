@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import {Poligono} from "../../../core/domain/models/poligono";
-import {PoligonosService} from "../../../core/domain/services/poligonosService";
+import {PoligonosService} from '../../../core/domain/services/poligonosService';
 
 @Component({
   selector: 'index-directive',
@@ -8,7 +7,6 @@ import {PoligonosService} from "../../../core/domain/services/poligonosService";
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent {
-  public title : string = 'Inicio';
   public poligonos: any;
   public services : string = 'SERVICIOS QUE ORFRECEMOS';
   public servicesLittle : string = 'A SU DISPOSICIÓN';
@@ -26,10 +24,6 @@ export class IndexComponent {
     this.poligonosService.getPoligonos().subscribe(response => {
       this.poligonos = response;
     });
-  }
-
-  addNumber() {
-    this.counter++;
   }
 
 
