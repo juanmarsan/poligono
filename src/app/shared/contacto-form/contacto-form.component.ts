@@ -14,7 +14,7 @@ export class ContactoFormComponent {
 
   sendForm(values: any) {
     console.log(values);
-    this.empresasService.sendContactForm(values).subscribe(
+    this.empresasService.insertEmpresa(values).subscribe(
       response => {
         console.log('enviado');
         this.contactoPeticionEnviado = true;

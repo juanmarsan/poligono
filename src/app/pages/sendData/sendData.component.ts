@@ -7,7 +7,7 @@ import {EmpresasService} from '../../../core/domain/services/empresasService';
   styleUrls: ['./sendData.component.css']
 })
 export class SendDataComponent {
-  public formularioContactos : string = 'FORMULARIO DE CONTACTO';
+  public formularioContactos : string = 'Añadir Empresas';
   public contactoPeticionEnviados: boolean = false;
 
 
