@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import { AppRoutingModule } from './app.routes';
 
 
@@ -19,6 +19,7 @@ import {SendDataComponent} from "./pages/sendData/sendData.component";
 import {MapaComponent} from "./pages/mapa/mapa.component";
 import {AgmCoreModule} from "@agm/core";
 import {PoligonosService} from '../core/domain/services/poligonosService';
+import {MatButtonModule} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {PoligonosService} from '../core/domain/services/poligonosService';
     SharedModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA_n0AE25IaRXb_bqCPopZxXiuVOpTglMk'
-    })
+    }),
+    MatButtonModule
   ],
   providers: [NoticiasService, EmpresasService, PoligonosService],
   bootstrap: [AppComponent]

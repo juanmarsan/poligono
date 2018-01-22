@@ -1,29 +1,37 @@
-<div class="contacto">
-	<div class="big-title-wrapper">
-		<h2>{{ title }}</h2>
-	</div>
-	<div class="content-wraper">
-		<div class="textoContacto">
-			<div>
-				{{textoContacto}}
-			</div>
-			<div class="relleno">
-				<div class="imagenContacto">
-					<img src="/assets/img/Palau.jpg" >
-				</div>
-				<div class="dondeContactar">
-					<p><img class="contactarForm" src="/assets/img/Iconos/location.png">{{ lugar }} <br>
-					 	{{ poblacion }}</p>
-					<p><img class="contactarForm" src="/assets/img/Iconos/phone.png">{{ telefono }}</p>
-					<p><img class="contactarForm" src="/assets/img/Iconos/email.png">{{ mail }}</p>
-					<p><img class="contactarForm" src="/assets/img/Iconos/horario.png">{{ horario }}</p>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	<app-contacto-form></app-contacto-form>
-</div>
+  <div class="big-title-wrapper">
+    <img src="/assets/img/fondo.png" />
+    <h2>{{ title }}</h2>
+  </div>
+
+
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <div>
+        {{textoContacto}}
+      </div>
+      <div class="relleno">
+        <div class="imagenContacto">
+          <img src="/assets/img/Palau.jpg">
+        </div>
+        <div class="dondeContactar">
+          <p><img class="contactarForm" src="/assets/img/Iconos/location.png">{{ lugar }} <br>
+            {{ poblacion }}</p>
+          <p><img class="contactarForm" src="/assets/img/Iconos/phone.png">{{ telefono }}</p>
+          <p><img class="contactarForm" src="/assets/img/Iconos/email.png">{{ mail }}</p>
+          <p><img class="contactarForm" src="/assets/img/Iconos/horario.png">{{ horario }}</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <app-contacto-form></app-contacto-form>
+    </div>
+  </div>
+
+
 <div class="mapa">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12423.461695932301!2d-0.598633787615526!3d38.88132071000426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd619d8df008f053%3A0x4392a6590daf3c75!2sAjuntament+d&#39;Aielo+de+Malferit!5e0!3m2!1ses!2ses!4v1514898465204"  frameborder="0" style="border:0" allowfullscreen></iframe>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12423.461695932301!2d-0.598633787615526!3d38.88132071000426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd619d8df008f053%3A0x4392a6590daf3c75!2sAjuntament+d&#39;Aielo+de+Malferit!5e0!3m2!1ses!2ses!4v1514898465204"
+    frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>

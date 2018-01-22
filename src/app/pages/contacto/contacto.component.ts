@@ -4,7 +4,7 @@ import {EmpresasService} from '../../../core/domain/services/empresasService';
 @Component({
   selector: 'contacto-directive',
   templateUrl: './contacto.component.html',
-  styleUrls: ['./contacto.component.css']
+  styleUrls: ['contacto.component.scss']
 })
 export class ContactoComponent {
   public title : string = 'Contacto';
