@@ -19,7 +19,8 @@ import {SendDataComponent} from "./pages/sendData/sendData.component";
 import {MapaComponent} from "./pages/mapa/mapa.component";
 import {AgmCoreModule} from "@agm/core";
 import {PoligonosService} from '../core/domain/services/poligonosService';
-import {MatButtonModule} from "@angular/material";
+import {MatButtonModule, MatMenuModule, MatIconModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import {MatButtonModule} from "@angular/material";
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA_n0AE25IaRXb_bqCPopZxXiuVOpTglMk'
     }),
-    MatButtonModule
+    MatButtonModule, MatMenuModule, MatIconModule, BrowserAnimationsModule
   ],
   providers: [NoticiasService, EmpresasService, PoligonosService],
   bootstrap: [AppComponent]

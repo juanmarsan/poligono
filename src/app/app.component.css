@@ -5,25 +5,80 @@ main{
 }
 
 .contenedor{
-    margin-top: 8%;
+    margin-top: 5%;
 }
 
 a:link{
  text-decoration:none;
 }
 
-.header-wrapper{
+.topnav {
+  background-color: black;
   overflow: hidden;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
-  background-color: white;
-	-webkit-box-shadow: 0px 16px 38px 8px rgba(0,0,0,0.45);
-	-moz-box-shadow: 0px 16px 38px 8px rgba(0,0,0,0.45);
-	box-shadow: 0px 16px 38px 8px rgba(0,0,0,0.45);
-	height: 100px;
+  height: 50px;
+  z-index: 1000;
 }
 
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #d8c3bb;
+  letter-spacing: 3px;
+  text-align: center;
+  padding: 20px 38px;
+  text-decoration: none;
+  font-size: 12px;
+  height: 50px;
+  text-transform: uppercase;
+}
+
+
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #373737;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  text-decoration: underline !important;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.topnav a.icon {
+  float: left;
+  display: block;
+}
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {height: 100%}
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 16px 20px;
+  }
+  .topnav a {
+    padding: 16px 20px;
+  }
+}
 
 
 footer{
@@ -41,25 +96,7 @@ footer{
 }
 
 .imgLogo img{height: 100%;}
-.menu{
-	float: right;
-	width: 88%;
-	height: 100px;
-}
-.menu nav{
-	text-align: center;
-}
-.menu nav a{
-	float: right;
-	padding-right: 5%;
-	padding-left: 5%;
-	text-align: center;
-	line-height: 100px;
-}
-.menu nav a:hover{
-color: white;
-background-color: #0071BC;
-}
+
 
 .divPie{
 	float: left;

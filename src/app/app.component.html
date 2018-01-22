@@ -1,41 +1,37 @@
-<div class="header-wrapper">
-  <div class="imgLogo">
-    <img src="/assets/img/logoAjuntament.png" >
-  </div>
-  <div class="menu">
-      <nav>
-        <a [routerLink]=" ['./contacto'] "
+
+      <nav id="myTopnav" [ngClass]="isActiveBurger ? 'topnav responsive' : 'topnav'">
+        <a href="javascript:void(0);" class="icon" (click)="switchBurger()">&#9776;</a>
+        <a  *ngIf="isActiveBurger" [routerLink]=" ['./contacto'] " (click)="isPhone && switchBurger()"
           routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
           CONTACTO
         </a>
-         <a [routerLink]=" ['./noticias'] "
+         <a *ngIf="isActiveBurger" [routerLink]=" ['./noticias'] " (click)="isPhone && switchBurger()"
           routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
           NOTICIAS
         </a>
-        <a [routerLink]=" ['./location'] "
+        <a *ngIf="isActiveBurger" [routerLink]=" ['./location'] " (click)="isPhone && switchBurger()"
           routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
           EMPRESAS
         </a>
-        <a [routerLink]=" ['./mapa'] "
+        <a *ngIf="isActiveBurger" [routerLink]=" ['./mapa'] " (click)="isPhone && switchBurger()"
           routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
           MAPA
         </a>
-        <a [routerLink]=" ['./index'] "
+        <a *ngIf="isActiveBurger" [routerLink]=" ['./index'] " (click)="isPhone && switchBurger()"
           routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
           INICIO
         </a>
       </nav>
-  </div>
-</div>
 
     <main>
       <div class="contenedor">
         <router-outlet></router-outlet>
       </div>
     </main>
-<button mat-raised-button color="primary">Primary</button>
-<button mat-raised-button color="accent">Accent</button>
 
+<div class="imgLogo">
+  <img src="/assets/img/logoAjuntament.png" >
+</div>
 <footer>
   <div class="footer" >
     <div class="divPie">INFORMACIÓN</div>
