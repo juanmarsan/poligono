@@ -1,3 +1,11 @@
+
+.example-full-width {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
 .formContactoForm{
   width: 25px;
   float:left;
@@ -13,31 +21,7 @@
   margin: 0% 7% 4% 0%;
   float: left;
 }
-.formContacto hr:after {
-  position: relative;
-  top: -22px;
-  content:"\25cf\25cf\25cf";
-  font-size: 34px;
-  line-height: 34px;
-  color: black;
-  width: 42%;
-  margin: 0% 7% 3% 0%;
-}
-.contactarForm{
-  float: left;
-  width: 7%;
-  margin-right: 10px;
-}
 
-
-
-.formu{
-    width: 42%;
-    margin: 0% 7% 1% 0%;
-}
-.formContacto textarea{
-    height: 70px;
-}
 
 .btnEnvio{
   -moz-user-select: none;
@@ -63,6 +47,8 @@
 }
 
 
-.imagenEnvio{
-  width: 50%;
+.button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

@@ -3,27 +3,60 @@
   <h2>{{formularioContacto}}</h2>
   <hr>
 
-  <form #myForm="ngForm" (ngSubmit)="sendForm(myForm.value)" *ngIf="! contactoPeticionEnviado">
-    <input class="formu" type="text" name="nombre" placeholder="Nombre" name="nombre"  ngModel required><br>
-    <select name="sector" (change)="filterName($event.target.value)">
-              <option [disabled]="true" [selected]="true">Filtrar Empresas</option>
-    </select>
-    <input class="formu" type="text" name="direccion" placeholder="Direccion" name="direccion"  ngModel required><br>
-    <select name="sector" (change)="filterName($event.target.value)">
-      <option [disabled]="true" [selected]="true">Filtrar Empresas</option>
-    </select>
-    <input class="formu" type="text" name="telefono" placeholder="Telefono" name="telefono"  ngModel required><br>
-    <input class="formu" type="text" name="movil" placeholder="Movil" name="movil"  ngModel required><br>
-    <input class="formu" type="text" name="email" placeholder="Email" name="web"  ngModel required><br>
-    <input class="formu" type="text" name="web" placeholder="Web" name="telefono"  ngModel required><br>
-    <textarea class="formu" name="comment" placeholder="comentarios" name="Comentarios"  ngModel required></textarea><br>
-    Foto<br>
-    <input class="formu" type="text" name="lati" placeholder="Lattud" name="lati"  ngModel required><br>
-    <input class="formu" type="text" name="longi" placeholder="Longitud" name="longi"  ngModel required><br>
+  <form class="example-full-width" #myForm="ngForm" (ngSubmit)="sendForm(myForm.value)" *ngIf="! contactoPeticionEnviado">
 
-    <button class="btnEnvio" type="submit" [disabled]="! myForm.form.valid"  name="send" >
-      <img class="imagenEnvio" src="/assets/img/btnEnviar.png">
-    </button>
+    <mat-form-field class="example-full-width">
+      <input matInput name="name" [(ngModel)]="contacto.name" placeholder="Nombre"  required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Filtrar Empresas" name="sector" [(ngModel)]="contacto.sector" (change)="filterName($event.target.value)">
+        <mat-option *ngFor="let food of null" [value]="food.value">
+          {{ food.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Direccion" name="direccion" [(ngModel)]="contacto.direccion" (change)="filterName($event.target.value)">
+        <mat-option *ngFor="let food of null" [value]="food.value">
+          {{ food.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput name="telefono" [(ngModel)]="contacto.telefono" placeholder="Telefono"   required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput name="movil" [(ngModel)]="contacto.movil" placeholder="Movil"  required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput name="email" [(ngModel)]="contacto.email" placeholder="email"   required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput name="web" [(ngModel)]="contacto.web" placeholder="web"   required>
+    </mat-form-field>
+
+
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput name="comment" [(ngModel)]="contacto.comment" placeholder="comentarios"  required></textarea>
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <input matInput name="lati" [(ngModel)]="contacto.lati" placeholder="lati" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput name="longi" [(ngModel)]="contacto.longi" placeholder="longi"  required>
+    </mat-form-field>
+
+    <div class="button-row">
+      <button mat-raised-button color="accent">Cancelar</button>
+      <button mat-raised-button color="primary" [disabled]="! myForm.form.valid">Enviar</button>
+      
+    </div>
   </form>
 
   <div *ngIf="contactoPeticionEnviado">

@@ -4,6 +4,8 @@ import {ContactoFormComponent} from './contacto-form/contacto-form.component';
 import {EmpresasService} from '../../core/domain/services/empresasService';
 import {CommonModule} from '@angular/common';
 import {OrdenarEmpresasPipe} from './ordenar-empresas/ordenar-empresas.pipe';
+import {MatInputModule, MatSelectModule, MatIconModule, MatButtonModule} from "@angular/material";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 
@@ -15,7 +17,12 @@ import {OrdenarEmpresasPipe} from './ordenar-empresas/ordenar-empresas.pipe';
   ],
   imports: [
     FormsModule,
-    CommonModule
+    CommonModule,
+    MatInputModule,
+    MatSelectModule,
+    MatIconModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [EmpresasService],
   exports : [ContactoFormComponent, OrdenarEmpresasPipe]

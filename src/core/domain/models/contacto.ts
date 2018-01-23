@@ -2,5 +2,11 @@ export class Contacto {
   name: string;
   email: string;
   telefono: string;
-  comentario: string;
+  comment: string;
+  sector: string;
+  direccion: string;
+  movil: string;
+  web: string;
+  lati: number
+  longi: number;
 }

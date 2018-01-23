@@ -1,33 +1,42 @@
+<div class="big-title-wrapper">
+  <img src="/assets/img/fondo.png"/>
+  <h2>{{ title }}</h2>
+</div>
 
-  <div class="big-title-wrapper">
-    <img src="/assets/img/fondo.png" />
-    <h2>{{ title }}</h2>
-  </div>
 
-
-  <div class="row">
-    <div class="col-xs-12 col-md-6">
-      <div>
-        {{textoContacto}}
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <p>{{textoContacto}}</p>
+        <img src="/assets/img/Palau.jpg">
       </div>
-      <div class="relleno">
-        <div class="imagenContacto">
-          <img src="/assets/img/Palau.jpg">
-        </div>
-        <div class="dondeContactar">
-          <p><img class="contactarForm" src="/assets/img/Iconos/location.png">{{ lugar }} <br>
-            {{ poblacion }}</p>
-          <p><img class="contactarForm" src="/assets/img/Iconos/phone.png">{{ telefono }}</p>
-          <p><img class="contactarForm" src="/assets/img/Iconos/email.png">{{ mail }}</p>
-          <p><img class="contactarForm" src="/assets/img/Iconos/horario.png">{{ horario }}</p>
-        </div>
+      <div class="col-xs-12 col-md-12">
+        <ul>
+          <li>
+            <mat-icon>add_location</mat-icon>
+            {{ lugar }}-{{ poblacion }}
+          </li>
+          <li>
+            <mat-icon>call</mat-icon>
+            {{ telefono }}
+          </li>
+          <li>
+            <mat-icon>chat</mat-icon>
+            {{ mail }}
+          </li>
+          <li>
+            <mat-icon>query_builder</mat-icon>
+            {{ horario }}
+          </li>
+        </ul>
       </div>
-
-    </div>
-    <div class="col-xs-12 col-md-6">
-      <app-contacto-form></app-contacto-form>
     </div>
   </div>
+  <div class="col-xs-12 col-md-6">
+    <app-contacto-form></app-contacto-form>
+  </div>
+</div>
 
 
 <div class="mapa">

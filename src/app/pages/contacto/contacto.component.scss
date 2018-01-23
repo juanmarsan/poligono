@@ -26,42 +26,16 @@
 }
 .row .col-xs-12 {
   border: 1px solid blue;
-  padding-left: 70px;
 }
-
-
-.textoContacto{
-	width: 41%;
-	float:left;
-	margin: 0% 2% 0% 7%;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-
-.imagenContacto{
-	width: 47%;
-	float:left;
-	padding-right: 3%;
+img {
+  width: 100%;
+  height: auto;
 }
-.imagenContacto img{
-    width: 290px;
-    height: 250px;
-}
-
-.dondeContactar{
-	width: 50%;
-	float:left;
-}
-
-.dondeContactar p{
-    padding: 3%;
-}
-.dondeContactar p img{
-    width: 8%;
-}
-
-.relleno{
-	margin-top: 5%;
-}
-
 
 
 
