@@ -24,7 +24,7 @@ a:link{
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
+  float: right;
   display: block;
   color: #d8c3bb;
   letter-spacing: 3px;

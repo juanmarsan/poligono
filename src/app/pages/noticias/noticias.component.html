@@ -1,14 +1,16 @@
 <div class="big-title-wrapper">
-	<h2>{{ title }}</h2>
+  <img src="/assets/img/fondo.png" />
+  <h2>{{ title }}</h2>
 </div>
 <div>
-	<div class="contenido" *ngFor="let noticia of noticias" id="{{noticia.id}}">
-    <a [routerLink]="['/noticia', noticia.id]">
-			<img src="/assets/img/Noticias/{{noticia.imagen}}" >
-			<p>{{noticia.title}}</p>
-			<p>{{noticia.descripcion}}</p>
-	    	<p>{{noticia.fecha}}</p>
-		</a>
-	</div>
-
+    <div class="row">
+    <div class="col-xs-12 col-md-4" *ngFor="let noticia of noticias" id="{{noticia.id}}">
+      <a [routerLink]="['/noticia', noticia.id]">
+        <img src="/assets/img/Noticias/{{noticia.imagen}}" >
+        <p>{{noticia.title}}</p>
+        <p>{{noticia.descripcion}}</p>
+          <p>{{noticia.fecha}}</p>
+      </a>
+    </div>
+    </div>
 </div>

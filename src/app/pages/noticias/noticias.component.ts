@@ -7,7 +7,7 @@ import {NoticiasService} from "../../../core/domain/services/noticiasService";
 @Component({
   selector: 'noticias-directive',
   templateUrl: './noticias.component.html',
-  styleUrls: ['./noticias.component.css']
+  styleUrls: ['./noticias.component.scss']
 })
 
 export class NoticiasComponent {

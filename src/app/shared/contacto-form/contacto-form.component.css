@@ -9,13 +9,13 @@
   height: 0;
   border-top: 4px double black;
   text-align:center;
-  width: 42%;
+  width: 86%;
   margin: 0% 7% 4% 0%;
   float: left;
 }
 .formContacto hr:after {
   position: relative;
-  top: -22px; 
+  top: -22px;
   content:"\25cf\25cf\25cf";
   font-size: 34px;
   line-height: 34px;
