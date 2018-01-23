@@ -21,6 +21,7 @@ import {AgmCoreModule} from "@agm/core";
 import {PoligonosService} from '../core/domain/services/poligonosService';
 import {MatButtonModule, MatMenuModule, MatIconModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ConfigurationService} from "../core/domain/services/configurationService";
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     }),
     MatButtonModule, MatMenuModule, MatIconModule, BrowserAnimationsModule
   ],
-  providers: [NoticiasService, EmpresasService, PoligonosService],
+  providers: [NoticiasService, EmpresasService, PoligonosService, ConfigurationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
