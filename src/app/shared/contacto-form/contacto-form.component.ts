@@ -13,7 +13,7 @@ export class ContactoFormComponent {
   public formularioContacto : string = 'Formulario de Contacto';
   public contactoPeticionEnviado: boolean = false;
   public contacto: Contacto;
-  public empresas: Empresa [];
+  public empresas: any;
   public poligonos: any;
 
   constructor(private empresasService: EmpresasService,
