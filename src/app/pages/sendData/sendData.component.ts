@@ -9,10 +9,18 @@ import {EmpresasService} from '../../../core/domain/services/empresasService';
 export class SendDataComponent {
   public formularioContactos : string = 'Añadir Empresas';
   public contactoPeticionEnviados: boolean = false;
+  public counter: number = 0;
+  public ordenarTipo: any;
+
+  public empresas: any;
 
 
 
-  constructor(private empresasService: EmpresasService) {}
+  constructor(private empresasService: EmpresasService) {
+    this.empresasService.getEmpresas().subscribe(response => {
+      this.empresas = response;
+    });
+  }
 
   sendForm(values: any) {
       console.log(values);
@@ -27,4 +35,21 @@ export class SendDataComponent {
         }
       )
   }
+
+
+  addNumber() {
+    this.counter++;
+    this.filterName("ordId");
+  }
+  resNumber() {
+    this.counter--;
+    this.filterName("ordId");
+  }
+  filterName(event: any) {
+    console.log(event);
+    this.ordenarTipo = event;
+  }
+
+
+
 }

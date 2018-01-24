@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-xs-12 col-md-4" *ngFor="let noticia of noticias" id="{{noticia.id}}">
           <a [routerLink]="['/noticia', noticia.id]">
-            <div *ngIf=" isPhone">
+            <div *ngIf="isPhone">
               <img src="/assets/img/Noticias/{{noticia.imagen}}" class="imnoticiapeq" >
             </div>
             <div *ngIf="! isPhone">

@@ -10,10 +10,14 @@ import {Observable} from "rxjs";
 export class NoticiasService implements INoticiasService{
   url: string = "http://www.web-salva.com/juan/verNoticia.php";
   urlNoticia: string = 'http://www.web-salva.com/juan/verUnaNoticia.php';
+  public innerWidth: any;
+  public isPhone: boolean = false;
+  constructor(private http: HttpClient) {
+    this.innerWidth = window.innerWidth;
+    this.isPhone = this.innerWidth < 400;
+  }
 
-  constructor(private http: HttpClient) {}
 
-  
 
   getNoticias(){
     return this.http.get(this.url).map(this.extractData);

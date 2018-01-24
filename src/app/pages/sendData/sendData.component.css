@@ -10,8 +10,8 @@
   border-top: 4px double black;
   text-align:center;
   width: 42%;
-  margin: 0% 7% 4% 0%;
   float: left;
+  margin-bottom: 10px;
 }
 .formuContacto hr:after {
   position: relative;
@@ -21,7 +21,6 @@
   line-height: 34px;
   color: black;
   width: 42%;
-  margin: 0% 7% 3% 0%;
 }
 .contactarForm{
   float: left;
@@ -65,4 +64,13 @@
 
 .imagenEnvio{
   width: 50%;
+}
+
+
+.envio{
+  margin-top: 50px;
+}
+
+.title-form{
+  width:100%;
 }

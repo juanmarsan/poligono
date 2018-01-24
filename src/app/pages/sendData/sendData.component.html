@@ -1,28 +1,28 @@
 <div class="formuContacto">
-<img class="formForm" src="/assets/img/Icono/FormColor.png">
-<h2>{{ formularioContactos }}</h2>
-<hr>
+      <div class="title-form">
+            <img class="formForm" src="/assets/img/Icono/FormColor.png">
+             <h2>{{ formularioContactos }}</h2>
+              <hr>
+      </div>
+      <div class="envio">
 
-<form #myForm="ngForm" (ngSubmit)="sendForm(myForm.value)" *ngIf="! contactoPeticionEnviados">
-  <input class="formu" type="text" name="nombre" placeholder="Nombre" name="nombre"  ngModel required><br>
-  <input class="formu" type="text" name="sector" placeholder="Sector" name="sector"  ngModel required><br>
-  <input class="formu" type="text" name="direccion" placeholder="Direccion" name="direccion"  ngModel required><br>
-  <input class="formu" type="text" name="poligono" placeholder="Poligono" name="poligono"  ngModel required><br>
-  <input class="formu" type="text" name="telefono" placeholder="Telefono" name="telefono"  ngModel required><br>
-  <input class="formu" type="text" name="movil" placeholder="Movil" name="movil"  ngModel required><br>
-  <input class="formu" type="text" name="email" placeholder="Email" name="email"  ngModel required><br>
-  <input class="formu" type="text" name="web" placeholder="Página web" name="web"  ngModel required><br>
-  <textarea class="formu" name="description" placeholder="Comentarios" name="description"  ngModel required></textarea><br>
-  <input class="formu" type="text" name="photo" placeholder="Foto" name="photo"  ngModel required><br>
-  <input class="formu" type="text" name="lati" placeholder="Latitud" name="lati"  ngModel required><br>
-  <input class="formu" type="text" name="longi" placeholder="Longitud" name="longi"  ngModel required><br>
 
-  <button class="btnEnvio" type="submit" [disabled]="! myForm.form.valid"  name="send" >
-    <img class="imagenEnvio" src="/assets/img/btnEnviar.png">
-  </button>
-</form>
+            <h2></h2>
 
-<div *ngIf="contactoPeticionEnviados">
-  FORMULARIO ENVIADO, LES CONTACTAREMOS PRONTO
-</div>
+          <form #myForm="ngForm" (ngSubmit)="sendForm(myForm.value)" *ngIf="! contactoPeticionEnviados">
+            <input class="formutop" type="button" name="menos" value="<" name="menos"(click)="resNumber()">
+            <input class="formutop" type="text" name="id" placeholder="id" name="id" value="{{counter}}">
+            <input class="formutop" type="button" name="mas" value=">" name="mas" (click)="addNumber()"><br>
+           <div *ngFor="let empresa of empresas | FiltrarCategoriaPipePipe:filtroEmpresaId " >
+                  {{empresa.longi}}
+           </div>
+
+        <button class="btnEnvio" type="submit" [disabled]="! myForm.form.valid"  name="send" >
+              <img class="imagenEnvio" src="/assets/img/btnEnviar.png">
+            </button>
+          </form>
+      </div>
+      <div *ngIf="contactoPeticionEnviados">
+        FORMULARIO ENVIADO, LES CONTACTAREMOS PRONTO
+      </div>
 </div>
