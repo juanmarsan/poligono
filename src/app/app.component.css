@@ -1,4 +1,3 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 main{
     font-family: 'Trebuchet MS', serif;
     font-size: 18px;
@@ -89,10 +88,7 @@ footer{
 }
 
 .imgLogo {
-	padding-left: 7%;
-	height: 100%;
-	width: 5%;
-	float:left;
+	height: 25px;
 }
 
 .imgLogo img{height: 100%;}

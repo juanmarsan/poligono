@@ -1,3 +1,6 @@
+mat-card{
+  margin-top: 50px;
+}
 .big-title-wrapper{
   width: 100%;
   position: relative;
@@ -24,14 +27,7 @@
 .row{
   margin-top: 50px;
 }
-.row .col-xs-12 {
-  border: 1px solid blue;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+
 img {
   width: 100%;
   height: auto;
@@ -43,4 +39,15 @@ img {
   width: 100%;
   height: 400px;
   margin-top: 100px;
+}
+
+.example-card {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.example-header-image {
+  background-image: url('../../../assets/img/Palau.jpg');
+  background-size: cover;
 }
