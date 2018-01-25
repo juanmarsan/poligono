@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ConfigurationService} from "../core/domain/services/configurationService";
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,10 @@ export class AppComponent {
   title = 'app';
   public isActiveBurger: boolean = true;
   public innerWidth: any;
-  public isPhone: boolean = false;
 
-  constructor(){
+  constructor(private ConfigurationService: ConfigurationService){
     this.innerWidth = window.innerWidth;
-    this.isPhone = this.innerWidth < 400;
+    this.ConfigurationService.isPhone = this.innerWidth < 400;
   }
 
   switchBurger(){

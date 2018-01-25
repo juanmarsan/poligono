@@ -1,37 +1,32 @@
 
       <nav id="myTopnav" [ngClass]="isActiveBurger ? 'topnav responsive' : 'topnav'">
         <a href="javascript:void(0);" class="icon" (click)="switchBurger()">&#9776;</a>
-        <a  *ngIf="isActiveBurger" [routerLink]=" ['./contacto'] " (click)="isPhone && switchBurger()"
+        <a  *ngIf="isActiveBurger" [routerLink]=" ['./contacto'] " (click)="ConfigurationService.isPhone && switchBurger()"
           routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
           CONTACTO
         </a>
-         <a *ngIf="isActiveBurger" [routerLink]=" ['./noticias'] " (click)="isPhone && switchBurger()"
+         <a *ngIf="isActiveBurger" [routerLink]=" ['./noticias'] " (click)="ConfigurationService.isPhone && switchBurger()"
           routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
           NOTICIAS
         </a>
-        <a *ngIf="isActiveBurger" [routerLink]=" ['./location'] " (click)="isPhone && switchBurger()"
+        <a *ngIf="isActiveBurger" [routerLink]=" ['./location'] " (click)="ConfigurationService.isPhone && switchBurger()"
           routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
           EMPRESAS
         </a>
-        <a *ngIf="isActiveBurger" [routerLink]=" ['./mapa'] " (click)="isPhone && switchBurger()"
+        <a *ngIf="isActiveBurger" [routerLink]=" ['./mapa'] " (click)="ConfigurationService.isPhone && switchBurger()"
           routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
           MAPA
         </a>
-        <a *ngIf="isActiveBurger" [routerLink]=" ['./index'] " (click)="isPhone && switchBurger()"
+        <a *ngIf="isActiveBurger" [routerLink]=" ['./index'] " (click)="ConfigurationService.isPhone && switchBurger()"
           routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
           INICIO
         </a>
       </nav>
-
     <main>
       <div class="contenedor">
         <router-outlet></router-outlet>
       </div>
     </main>
-
-<div class="imgLogo">
-  <img src="/assets/img/logoAjuntament.png" >
-</div>
 <footer>
   <div class="footer" >
     <div class="divPie">INFORMACIÓN</div>

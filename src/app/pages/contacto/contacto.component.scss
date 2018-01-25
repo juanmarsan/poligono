@@ -1,3 +1,6 @@
+mat-card{
+  margin-top: 50px;
+}
 .big-title-wrapper{
   width: 100%;
   position: relative;
@@ -24,44 +27,11 @@
 .row{
   margin-top: 50px;
 }
-.row .col-xs-12 {
-  border: 1px solid blue;
-  padding-left: 70px;
-}
 
-
-.textoContacto{
-	width: 41%;
-	float:left;
-	margin: 0% 2% 0% 7%;
+img {
+  width: 100%;
+  height: auto;
 }
-
-.imagenContacto{
-	width: 47%;
-	float:left;
-	padding-right: 3%;
-}
-.imagenContacto img{
-    width: 290px;
-    height: 250px;
-}
-
-.dondeContactar{
-	width: 50%;
-	float:left;
-}
-
-.dondeContactar p{
-    padding: 3%;
-}
-.dondeContactar p img{
-    width: 8%;
-}
-
-.relleno{
-	margin-top: 5%;
-}
-
 
 
 
@@ -69,4 +39,15 @@
   width: 100%;
   height: 400px;
   margin-top: 100px;
+}
+
+.example-card {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.example-header-image {
+  background-image: url('../../../assets/img/Palau.jpg');
+  background-size: cover;
 }

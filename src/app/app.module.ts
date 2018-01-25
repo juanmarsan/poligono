@@ -11,7 +11,6 @@ import {NoticiasService} from '../core/domain/services/noticiasService';
 import {EmpresasService} from '../core/domain/services/empresasService';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-import {SharedModule} from './shared/shared.module';
 import {NoticiaDetalleComponent} from "./pages/noticias/noticia-detalle/noticia-detalle.component";
 import {NoticiasComponent} from "./pages/noticias/noticias.component";
 import {LocationComponent} from "./pages/location/location.component";
@@ -19,8 +18,14 @@ import {SendDataComponent} from "./pages/sendData/sendData.component";
 import {MapaComponent} from "./pages/mapa/mapa.component";
 import {AgmCoreModule} from "@agm/core";
 import {PoligonosService} from '../core/domain/services/poligonosService';
-import {MatButtonModule, MatMenuModule, MatIconModule} from '@angular/material';
+import {
+  MatButtonModule, MatMenuModule, MatIconModule, MatInputModule, MatSelectModule,
+  MatFormFieldModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ConfigurationService} from "../core/domain/services/configurationService";
+import {ContactoFormComponent} from "./shared/contacto-form/contacto-form.component";
+import {OrdenarEmpresasPipe} from "./shared/ordenar-empresas/ordenar-empresas.pipe";
+import {MaterialModule} from "./material.module";
 
 @NgModule({
   declarations: [
@@ -31,20 +36,23 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     NoticiasComponent,
     LocationComponent,
     MapaComponent,
-    SendDataComponent
+    SendDataComponent,
+    ContactoFormComponent,
+    OrdenarEmpresasPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    SharedModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA_n0AE25IaRXb_bqCPopZxXiuVOpTglMk'
     }),
-    MatButtonModule, MatMenuModule, MatIconModule, BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
+
   ],
-  providers: [NoticiasService, EmpresasService, PoligonosService],
+  providers: [NoticiasService, EmpresasService, PoligonosService, ConfigurationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

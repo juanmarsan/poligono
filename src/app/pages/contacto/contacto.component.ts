@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {EmpresasService} from '../../../core/domain/services/empresasService';
 
 @Component({
   selector: 'contacto-directive',
@@ -19,6 +18,8 @@ export class ContactoComponent {
   public formularioContacto : string = 'FORMULARIO DE CONTACTO';
   public counter: number = 0;
 
+  constructor(){
+  }
   addNumber() {
     this.counter++;
   }
