@@ -25,6 +25,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ConfigurationService} from "../core/domain/services/configurationService";
 import {ContactoFormComponent} from "./shared/contacto-form/contacto-form.component";
 import {OrdenarEmpresasPipe} from "./shared/ordenar-empresas/ordenar-empresas.pipe";
+import {FiltrarEmpresaIdPipe} from "./shared/filtrar/filtrar-empresa-id.pipe";
 import {MaterialModule} from "./material.module";
 
 @NgModule({
@@ -38,6 +39,7 @@ import {MaterialModule} from "./material.module";
     MapaComponent,
     SendDataComponent,
     ContactoFormComponent,
+    FiltrarEmpresaIdPipe,
     OrdenarEmpresasPipe
   ],
   imports: [

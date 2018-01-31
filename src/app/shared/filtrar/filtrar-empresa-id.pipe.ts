@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({name: 'filtroEmpresaId'})
-  export class FiltrarCategoriaPipePipe implements PipeTransform {
+@Pipe({name: 'FiltrarEmpresaIdPipe'})
+  export class FiltrarEmpresaIdPipe implements PipeTransform {
   transform(values: any[], ordenarPor: string): any {
     if(ordenarPor == 'ordId'){
       values.sort((a: any, b: any) => {
