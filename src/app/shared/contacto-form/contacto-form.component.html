@@ -13,50 +13,17 @@
 
 
   <form class="example-full-width" #myForm="ngForm" (ngSubmit)="sendForm(myForm.value)" *ngIf="! contactoPeticionEnviado">
-    <mat-form-field>
-      <mat-select placeholder="Filtrar Empresas" name="sector" [(ngModel)]="contacto.sector" (change)="filterName($event.target.value)">
-        <mat-option *ngFor="let empresa of empresas" [value]="empresa.id">
-          {{ empresa.title }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-select placeholder="Direccion" name="direccion" [(ngModel)]="contacto.direccion" (change)="filterName($event.target.value)">
-        <mat-option *ngFor="let poligono of poligonos" [value]="poligono.id">
-          {{ poligono.title }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
+       <mat-form-field class="example-full-width">
       <input matInput name="name" [(ngModel)]="contacto.name" placeholder="Nombre"  required>
     </mat-form-field>
-
     <mat-form-field class="example-full-width">
       <input matInput name="telefono" [(ngModel)]="contacto.telefono" placeholder="Telefono"   required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-      <input matInput name="movil" [(ngModel)]="contacto.movil" placeholder="Movil"  required>
+      <input matInput name="email" [(ngModel)]="contacto.email" placeholder="eEmail"   required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-      <input matInput name="email" [(ngModel)]="contacto.email" placeholder="email"   required>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput name="web" [(ngModel)]="contacto.web" placeholder="web"   required>
-    </mat-form-field>
-
-
-
-    <mat-form-field class="example-full-width">
-      <textarea matInput name="comment" [(ngModel)]="contacto.comment" placeholder="comentarios"  required></textarea>
-    </mat-form-field>
-
-
-    <mat-form-field class="example-full-width">
-      <input matInput name="lati" [(ngModel)]="contacto.lati" placeholder="lati" required>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput name="longi" [(ngModel)]="contacto.longi" placeholder="longi"  required>
+      <textarea matInput name="comment" [(ngModel)]="contacto.comment" placeholder="Comentarios"  required></textarea>
     </mat-form-field>
 
     <div class="button-row">

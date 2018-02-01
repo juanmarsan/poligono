@@ -19,7 +19,7 @@ export class ContactoFormComponent {
   constructor(private empresasService: EmpresasService,
               private poligonoService: PoligonosService) {
     this.contacto = new Contacto;
-    this.contacto.telefono ="333";
+    this.contacto.telefono ="";
     this.empresasService.getEmpresas().subscribe(empresas =>{
       this.empresas = empresas
     });

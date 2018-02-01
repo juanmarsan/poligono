@@ -13,8 +13,45 @@
             <input class="formutop" type="button" name="menos" value="<" name="menos"(click)="resNumber()">
             <input class="formutop" type="text" name="id" placeholder="id" name="id" value="{{counter}}">
             <input class="formutop" type="button" name="mas" value=">" name="mas" (click)="addNumber()"><br>
-           <div *ngFor="let empresa of empresas | FiltrarCategoriaPipePipe:filtroEmpresaId " >
-                  {{empresa.longi}}
+
+           <div *ngFor="let empresa of empresas | FiltrarEmpresaIdPipe: FiltrarEmpresaIdPipe " >
+
+             <mat-form-field class="example-full-width">
+               <input matInput name="name" value="{{empresa.title}}"  required>
+             </mat-form-field>
+             <mat-form-field class="example-full-width">
+               <input matInput name="sectot" value="sector"  required>
+             </mat-form-field>
+             <mat-form-field class="example-full-width">
+               <input matInput name="direccion"  value="{{empresa.adress}}"    required>
+             </mat-form-field>
+             <mat-form-field class="example-full-width">
+               <input matInput name="poligono"  value="{{empresa.poligono}}"    required>
+             </mat-form-field>
+             <mat-form-field class="example-full-width">
+               <input matInput name="telefono"  value="{{empresa.telefono}}"    required>
+             </mat-form-field>
+             <mat-form-field class="example-full-width">
+               <input matInput name="movil"  value="{{empresa.movil}}"   required>
+             </mat-form-field>
+             <mat-form-field class="example-full-width">
+               <input matInput name="email"  value="{{empresa.email}}"    required>
+             </mat-form-field>
+             <mat-form-field class="example-full-width">
+               <input matInput name="web"  value="{{empresa.web}}"   required>
+             </mat-form-field>
+             <mat-form-field class="example-full-width">
+               <textarea matInput name="descripcion" value="{{empresa.description}}"  required></textarea>
+             </mat-form-field>
+             <mat-form-field class="example-full-width">
+               <input matInput name="lati" value="{{empresa.lati}}"  required>
+             </mat-form-field>
+             <mat-form-field class="example-full-width">
+               <input matInput name="foto" value="{{empresa.photo}}"  required>
+             </mat-form-field>
+             <mat-form-field class="example-full-width">
+               <input matInput name="longi" value="{{empresa.longi}}"   required>
+             </mat-form-field>
            </div>
 
         <button class="btnEnvio" type="submit" [disabled]="! myForm.form.valid"  name="send" >

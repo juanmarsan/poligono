@@ -1,39 +1,55 @@
 <div class="contacto">
-  <div class="big-title-wrapper">
-    <h2>{{ title }}</h2>
-  </div>
-  <div class="content-wraper">
-    <div class="content-business">
-      <h2>Filtros para EMPRESAS</h2>
-      	<div class="select">
-          <select name="ordenarTipo" (change)="filterName($event.target.value)">
-            <option [disabled]="true" [selected]="true">Filtrar Empresas</option>
-            <option (click)="filterName()" value="ordNombre">Por Nombre</option>
-            <option (click)="filterCategory()" value="ordCategoria">Por Categoria</option>
-            <option (click)="filterCategory()" value="ordPoligono">Por Poligonos</option>
-          </select>
+        <div class="big-title-wrapper">
+          <h2>{{ title }}</h2>
         </div>
-
-      <div class="business" *ngFor="let empresa of empresas | OrdenarEmpresasPipe:ordenarTipo " id="{{empresa.id}}">
-        <div class="businessEmpresa">
-          <h2>{{empresa.title}}</h2>
-          <hr>
+        <div class="content-wraper">
+                <div class="content-business">
+                    <h2>Filtros para EMPRESAS</h2>
+                    <div class="select">
+                      <select name="ordenarTipo" (change)="filterName($event.target.value)">
+                        <option [disabled]="true" [selected]="true">Filtrar Empresas</option>
+                        <option (click)="filterName()" value="ordNombre">Por Nombre</option>
+                        <option (click)="filterCategory()" value="ordCategoria">Por Categoria</option>
+                        <option (click)="filterCategory()" value="ordPoligono">Por Poligonos</option>
+                      </select>
+                    </div>
+                    <div class="col-xs-12 col-md-12" *ngFor="let empresa of empresas | OrdenarEmpresasPipe:ordenarTipo " id="{{empresa.id}}">
+                                  <div class="businessEmpresa col-xs-12 col-md-12">
+                                    <h2>{{empresa.title}}</h2>
+                                    <hr>
+                                  </div>
+                                  <div class="businessEmpresa col-xs-3 col-md-12">
+                                      <img src="/assets/img/Empresas/{{empresa.photo}}">
+                                      <div class="sector">{{empresa.sector}}</div>
+                                  </div>
+                                  <div class="business-title col-xs-3 col-md-12">
+                                        <mat-card class="example-card">
+                                          <mat-card-content>
+                                            <!--JUAN: esto crea un element material de tipo, llista -->
+                                            <mat-list>
+                                              <mat-list-item>
+                                                <mat-icon mat-list-icon>business</mat-icon>{{empresa.poligono}}
+                                              </mat-list-item>
+                                              <mat-list-item>
+                                                <mat-icon mat-list-icon>location_on</mat-icon>{{empresa.adress}}
+                                              </mat-list-item>
+                                              <mat-list-item>
+                                                <mat-icon mat-list-icon>phone</mat-icon>{{empresa.telefono}}
+                                              </mat-list-item>
+                                              <mat-list-item>
+                                                <mat-icon mat-list-icon>email</mat-icon>{{empresa.email}}
+                                              </mat-list-item>
+                                              <mat-list-item>
+                                                <mat-icon mat-list-icon>web</mat-icon>{{empresa.web}}
+                                              </mat-list-item>
+                                            </mat-list>
+                                          </mat-card-content>
+                                        </mat-card>
+                                  </div>
+                                  <div class="mapa col-xs-6 col-md-12">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7386.845763340107!2d-0.5853225977305481!3d38.88313630607257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1516709666356" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                  </div>
+                   </div>
+             </div>
         </div>
-        <img src="/assets/img/Empresas/{{empresa.photo}}">
-        <div class="business-title">
-          <div class="dondeContactar">
-            <p><img class="contactarForm" src="/assets/img/Iconos/poligono.png"> {{empresa.poligono}}</p>
-            <p><img class="contactarForm" src="/assets/img/Iconos/location.png"> {{empresa.adress}}</p>
-            <p><img class="contactarForm" src="/assets/img/Iconos/phone.png">{{empresa.telefono}}</p>
-            <p><img class="contactarForm" src="/assets/img/Iconos/email.png">{{empresa.email}}</p>
-            <p><img class="contactarForm" src="/assets/img/Iconos/horario.png">{{empresa.web}}</p>
-          </div>
-          <div class="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7386.845763340107!2d-0.5853225977305481!3d38.88313630607257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1516709666356" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>          </div>
-        </div>
-        <div class="sector">{{empresa.sector}}</div>
-      </div>
-    </div>
-  </div>
 </div>
-

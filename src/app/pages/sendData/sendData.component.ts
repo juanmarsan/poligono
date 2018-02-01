@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {EmpresasService} from '../../../core/domain/services/empresasService';
-
+import {Empresa} from '../models/empresa';
 @Component({
   selector: 'app-sendData-form',
   templateUrl: './sendData.component.html',
@@ -13,7 +13,7 @@ export class SendDataComponent {
   public ordenarTipo: any;
 
   public empresas: any;
-
+public listaCli: Empresa[];
 
 
   constructor(private empresasService: EmpresasService) {
@@ -35,7 +35,6 @@ export class SendDataComponent {
         }
       )
   }
-
 
   addNumber() {
     this.counter++;
