@@ -1,55 +1,66 @@
 <div class="contacto">
-        <div class="big-title-wrapper">
-          <h2>{{ title }}</h2>
-        </div>
-        <div class="content-wraper">
-                <div class="content-business">
-                    <h2>Filtros para EMPRESAS</h2>
-                    <div class="select">
-                      <select name="ordenarTipo" (change)="filterName($event.target.value)">
-                        <option [disabled]="true" [selected]="true">Filtrar Empresas</option>
-                        <option (click)="filterName()" value="ordNombre">Por Nombre</option>
-                        <option (click)="filterCategory()" value="ordCategoria">Por Categoria</option>
-                        <option (click)="filterCategory()" value="ordPoligono">Por Poligonos</option>
-                      </select>
-                    </div>
-                    <div class="col-xs-12 col-md-12" *ngFor="let empresa of empresas | OrdenarEmpresasPipe:ordenarTipo " id="{{empresa.id}}">
-                                  <div class="businessEmpresa col-xs-12 col-md-12">
-                                    <h2>{{empresa.title}}</h2>
-                                    <hr>
-                                  </div>
-                                  <div class="businessEmpresa col-xs-3 col-md-12">
-                                      <img src="/assets/img/Empresas/{{empresa.photo}}">
-                                      <div class="sector">{{empresa.sector}}</div>
-                                  </div>
-                                  <div class="business-title col-xs-3 col-md-12">
-                                        <mat-card class="example-card">
-                                          <mat-card-content>
-                                            <!--JUAN: esto crea un element material de tipo, llista -->
-                                            <mat-list>
-                                              <mat-list-item>
-                                                <mat-icon mat-list-icon>business</mat-icon>{{empresa.poligono}}
-                                              </mat-list-item>
-                                              <mat-list-item>
-                                                <mat-icon mat-list-icon>location_on</mat-icon>{{empresa.adress}}
-                                              </mat-list-item>
-                                              <mat-list-item>
-                                                <mat-icon mat-list-icon>phone</mat-icon>{{empresa.telefono}}
-                                              </mat-list-item>
-                                              <mat-list-item>
-                                                <mat-icon mat-list-icon>email</mat-icon>{{empresa.email}}
-                                              </mat-list-item>
-                                              <mat-list-item>
-                                                <mat-icon mat-list-icon>web</mat-icon>{{empresa.web}}
-                                              </mat-list-item>
-                                            </mat-list>
-                                          </mat-card-content>
-                                        </mat-card>
-                                  </div>
-                                  <div class="mapa col-xs-6 col-md-12">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7386.845763340107!2d-0.5853225977305481!3d38.88313630607257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1516709666356" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                  </div>
-                   </div>
-             </div>
-        </div>
+  <div class="big-title-wrapper">
+    <h2>{{ title }}</h2>
+  </div>
+  <div class="content-wraper">
+    <div class="content-business">
+      <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <span>Filtros para EMPRESAS</span>
+          <span class="example-spacer"></span>
+          <mat-icon class="example-icon">verified_user</mat-icon>
+        </mat-toolbar-row>
+      </mat-toolbar>
+
+      <div class="col-xs-12 col-md-12">
+      <mat-form-field>
+        <mat-select placeholder="Filtrar Empresas" (change)="filterName($event.target.value)">
+          <mat-option [value]="ordNombre">
+            Por Nombre
+          </mat-option>
+          <mat-option [value]="ordCategoria">
+            Por Categoria
+          </mat-option>
+          <mat-option [value]="ordPoligono">
+            Por Poligonos
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </div>
+
+      <div class="col-xs-12 col-md-6" *ngFor="let empresa of empresas | OrdenarEmpresasPipe:ordenarTipo " id="{{empresa.id}}">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>{{empresa.title}}</mat-card-title>
+            <mat-card-subtitle>{{empresa.sector}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="/assets/img/Empresas/{{empresa.photo}}">
+          <mat-card-content>
+            <mat-list>
+              <mat-list-item>
+                <mat-icon mat-list-icon>business</mat-icon>
+                {{empresa.poligono}}
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon mat-list-icon>location_on</mat-icon>
+                {{empresa.adress}}
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon mat-list-icon>phone</mat-icon>
+                {{empresa.telefono}}
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon mat-list-icon>email</mat-icon>
+                {{empresa.email}}
+              </mat-list-item>
+              <mat-list-item>
+                <mat-icon mat-list-icon>web</mat-icon>
+                {{empresa.web}}
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
 </div>

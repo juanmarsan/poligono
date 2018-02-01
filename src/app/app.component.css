@@ -5,6 +5,7 @@ main{
 
 .contenedor{
     margin-top: 5%;
+  overflow-x: hidden;
 }
 
 a:link{

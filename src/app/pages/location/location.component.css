@@ -25,48 +25,10 @@ filter: grayscale(-50%);
   margin-top: -60px;
   margin-left: 7%;
   margin-right: 7%;
+  margin-bottom: 50px;
 }
 
-.content-business h2{
-  text-align: center;
-}
-.content-business h3{
-  margin-top: 60px;
-  text-align: center;
-}
 
-.businessEmpresa{
-padding-bottom: 18px;
-}
-
-.business{
-  float:left;
-  width: 100%;
-  padding: 60px 1% 0% 1%;
-}
-
-.business img{
-  width: 300px;
-  height: 140px;
-  float: left;
-}
-
-.business-title{
-  width: 72%;
-  float: left;
-  margin-top: -27px;
-  margin-left: 10px;
-}
-
-.dondeContactar{
-  width: 39%;
-  float:left;
-}
-
-.dondeContactar p img{
-    width: 25px;
-    height: 25px;
-}
 
 .mapa{
 float: left;
@@ -85,25 +47,7 @@ height: 200px;
   position: absolute;
 }
 
-.select{
-  height: 42px;
-  text-align: center;
-}
 
-select {
-width:200px;
-padding:7px;
-margin-top:5px;
-line-height:1;
-border-radius:5px;
-background-color:#0071BC;
-color:#fff;
--webkit-appearance:none;
-box-shadow:inset 0 0 10px 0 rgba(0,0,0,0.6);
-outline:none;
+.example-spacer {
+  flex: 1 1 auto;
 }
-select:hover {
-color:#00ff7f;
-}
-
-

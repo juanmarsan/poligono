@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {EmpresasService} from '../../../core/domain/services/empresasService';
-import {Empresa} from '../models/empresa';
+import {Empresa} from '../../../core/domain/models/empresa';
+
 @Component({
   selector: 'app-sendData-form',
   templateUrl: './sendData.component.html',
