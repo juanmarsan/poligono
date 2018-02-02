@@ -19,7 +19,6 @@ filter: grayscale(-50%);
     margin-top: 80px;
 }
 
-
 .content-business{
   width: 85%;
   margin-top: -60px;
@@ -27,26 +26,6 @@ filter: grayscale(-50%);
   margin-right: 7%;
   margin-bottom: 50px;
 }
-
-
-
-.mapa{
-float: left;
-width: 61%;
-height: 200px;
-}
-
-.mapa iframe{
-  height: 100%;
-  width: 100%;
-}
-
-.sector{
-  background-color: orange;
-  width: 289px;
-  position: absolute;
-}
-
 
 .example-spacer {
   flex: 1 1 auto;

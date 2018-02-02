@@ -1,11 +1,3 @@
-.contenedor{
-    margin-top: 13%;
-}
-
-.indexContacto{
-  width: 100%;
-}
-
 .title-information{
   width: 100%;
 }
@@ -14,29 +6,6 @@
   text-align: center;
   margin-top: 17px;
 }
-
-.information-pointer{
-  float: left;
-  width: 33.33333333333%;
-}
-
-.information-pointer h3{
-  text-align: center;
-}
-
-.title-business{
-  width: 100%
-}
-
-.title-business h2{
-  text-align: center;
-}
-
-
-
-
-
-
 
 .slider {
   width: 100%;
@@ -48,7 +17,6 @@
   display: flex;
   padding: 0;
   width: 400%;
-
   animation: cambio 20s infinite alternate linear;
 }
 
@@ -76,7 +44,6 @@
   100% {margin-left: -300%;}
 }
 
-
 .content-business{
   width: 100%;
   margin-top: -60px;
@@ -85,30 +52,6 @@
 .content-business h2{
   text-align: center;
 }
-.content-business h3{
-  margin-top: 60px;
-  text-align: center;
-}
-
-
-.business{
-  float:left;
-  width: 31%;
-  text-align: center;
-  padding: 60px 1% 0% 1%;
-}
-
-.business img{
-  width: 300px;
-  height: 140px;
-}
-
-.poligonos{
-  width: 100%;
-  height: 230px;
-  margin: 0 auto;
-}
-
 
 .saludos{
   width: 100%;
@@ -121,16 +64,6 @@
 
 .saludos h4{
   text-align: center;
-  margin-top: -20px;
+  margin-top: -15px;
 }
 
-.content-saludo img {
-  height: 300px;
-  float: left;
-  margin: 0% 2% 2% 7%;
-}
-
-.content-saludo div {
-  width: 70%;
-  float: left;
-}
