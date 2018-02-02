@@ -3,7 +3,8 @@ import {
   MatButtonModule, MatMenuModule, MatIconModule, MatSelectModule,
   MatFormFieldModule, MatInputModule, MatToolbarModule, MatListModule, MatCardModule, MatDividerModule
 } from '@angular/material';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {TituloCategoriaComponent} from './shared/titulo-categoria/titulo-categoria.component';
 
 @NgModule({
   imports: [MatButtonModule, MatMenuModule, MatIconModule,

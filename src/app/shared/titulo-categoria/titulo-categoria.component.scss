@@ -1,0 +1,29 @@
+.container-titulo {
+  position: relative;
+  text-align: center;
+  color: white;
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 65px;
+    font-weight: 600;
+    font-family: 'Coda Caption', sans-serif;
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .centered {
+    font-size: 25px !important;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .centered {
+    font-size:35px !important;
+  }
+}

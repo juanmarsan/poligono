@@ -27,6 +27,7 @@ import {ContactoFormComponent} from "./shared/contacto-form/contacto-form.compon
 import {OrdenarEmpresasPipe} from "./shared/ordenar-empresas/ordenar-empresas.pipe";
 import {FiltrarEmpresaIdPipe} from "./shared/filtrar/filtrar-empresa-id.pipe";
 import {MaterialModule} from "./material.module";
+import {TituloCategoriaComponent} from './shared/titulo-categoria/titulo-categoria.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {MaterialModule} from "./material.module";
     SendDataComponent,
     ContactoFormComponent,
     FiltrarEmpresaIdPipe,
-    OrdenarEmpresasPipe
+    OrdenarEmpresasPipe,
+    TituloCategoriaComponent
   ],
   imports: [
     BrowserModule,

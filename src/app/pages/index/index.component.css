@@ -1,7 +1,10 @@
 .title-information{
   width: 100%;
 }
-
+.titulo{
+  font-family: 'Oswald', sans-serif;
+  font-size: 45px;
+}
 .title-information h2,p{
   text-align: center;
   margin-top: 17px;

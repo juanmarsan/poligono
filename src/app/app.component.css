@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Coda+Caption:800|Open+Sans+Condensed:300|Oswald:300');
 main{
-    font-family: 'Trebuchet MS', serif;
-    font-size: 18px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
 }
+
 
 .contenedor{
     margin-top: 5%;

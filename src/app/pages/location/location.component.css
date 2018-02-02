@@ -1,19 +1,4 @@
-.big-title-wrapper{
-  background-color: aqua;
-  height: 200px;
-  width: 100%;
-  background-image: url("/assets/img/fondo.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  -webkit-filter: grayscale(-50%);
-filter: grayscale(-50%);
-}
 
-.big-title-wrapper h2{
-    text-align: center;
-    line-height: 200px;
-    font-family: "Roboto Condensed",sans-serif;
-}
 
 .content-wraper{
     margin-top: 80px;
