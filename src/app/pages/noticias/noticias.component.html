@@ -18,27 +18,4 @@
       </div>
     </div>
 </div>
-=======
-<div class="big-title-wrapper">
-  <img src="/assets/img/fondo.png" />
-  <h2>{{ title }}</h2>
-</div>
-<div>
-    <div class="row">
-      <div class="col-xs-12 col-md-4" *ngFor="let noticia of noticias" id="{{noticia.id}}">
-          <a [routerLink]="['/noticia', noticia.id]">
-            <div *ngIf=" ConfigurationService.isPhone">
-              <img src="/assets/img/Noticias/{{noticia.imagen}}" class="imnoticiapeq" >
-            </div>
-            <div *ngIf="! ConfigurationService.isPhone">
-              <img src="/assets/img/Noticias/{{noticia.imagen}}" class="imnoticia" >
-            </div>
 
-                     <p>{{noticia.title}}</p>
-                     <p>{{noticia.descripcion}}</p>
-                       <p>{{noticia.fecha}}</p>
-          </a>
-      </div>
-    </div>
-</div>
->>>>>>> bc1d4d18425778bf8b95b99b3e3e3cd412a33451

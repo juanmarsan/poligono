@@ -20,8 +20,7 @@
     </div>
     <div class="content-information">
       <div class="title-information">
-        <h2>{{ services }}</h2>
-        <p>{{ servicesLittle }}</p>
+        <h2>{{ services }} {{ servicesLittle }}</h2>
       </div>
       <div class="information">
         <div class="col-xs-12 col-md-4">
@@ -47,11 +46,14 @@
         </div>
       </div>
     </div>
-    <div class="saludos">
-      <h2>SALUDA EL ALCALDE</h2>
-      <h4>JOSE LUIS JUAN PINTER</h4>
+    <div>
+      <div class="col-xs-12 col-md-12">
+        <div class="titulo">Saluda el alcalde</div>
+
+      </div>
       <div class="col-xs-12 col-md-3">
         <img src="/assets/img/alcalde.jpg" alt="AlcaldeFoto">
+        <h4>JOSE LUIS JUAN PINTER</h4>
       </div>
       <div class="col-xs-12 col-md-9">
         Aqui van unas palabras del alcalde sobre las empresas, proyectos, de los poligonos de Aielo de Malferit
@@ -72,21 +74,20 @@
         leo eget bibendum sodales, augue velit cursus nunc,
       </div>
     </div>
-    <div class="content-business">
-      <h2>Nuestros Poligonos</h2>
-      <div class="col-xs-12 col-md-6">
-        <a [routerLink]=" ['/location'] "
-           routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}"
-           *ngFor="let poligono of poligonos" id="{{poligono.id}}">
-          <div class="business" id="{{poligono.id}}">
-            <img src="/assets/img/{{poligono.photo}}">
-            <p>{{poligono.title}}</p>
-          </div>
-        </a>
-      </div>
+    <div class="col-xs-12 col-md-12">
+      <div class="titulo">Nuestros Poligonos</div>
+    </div>
+    <div class="col-xs-12 col-md-6" *ngFor="let poligono of poligonos" id="{{poligono.id}}">
       <a [routerLink]=" ['/location'] "
          routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
-        <h3>Ver todas las empresas</h3>
+        <img src="/assets/img/{{poligono.photo}}">
+        <p>{{poligono.title}}</p>
       </a>
+    </div>
+    <div class="col-xs-12 col-md-12">
+    <a [routerLink]=" ['/location'] "
+       routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
+      <h3>Ver todas las empresas</h3>
+    </a>
     </div>
   </div>
