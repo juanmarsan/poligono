@@ -1,5 +1,5 @@
 
-<app-titulo-categoria [foto]="'/assets/img/fondo.png'" [titulo]="title"  ></app-titulo-categoria>
+<app-titulo-categoria [foto]="'./assets/img/fondo.png'" [titulo]="title"  ></app-titulo-categoria>
 <div>
     <div class="row">
       <div class="col-xs-12 col-md-4" *ngFor="let noticia of noticias" id="{{noticia.id}}">
@@ -10,10 +10,10 @@
             <p>{{noticia.descripcion}}</p>
             <i>{{noticia.fecha}}</i>
             <div *ngIf="isPhone">
-              <img src="/assets/img/Noticias/{{noticia.imagen}}" class="imnoticiapeq" >
+              <img src="./assets/img/Noticias/{{noticia.imagen}}" class="imnoticiapeq" >
             </div>
             <div *ngIf="! isPhone">
-              <img src="/assets/img/Noticias/{{noticia.imagen}}" class="imnoticia" >
+              <img src="./assets/img/Noticias/{{noticia.imagen}}" class="imnoticia" >
             </div>
           </a>
         <hr  />

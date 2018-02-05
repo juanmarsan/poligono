@@ -5,16 +5,16 @@
     <div class="slider">
       <ul>
         <li>
-          <img src="/assets/img/GaleriaInicio/aielo.jpg" alt="">
+          <img src="./assets/img/GaleriaInicio/aielo.jpg" alt="">
         </li>
         <li>
-          <img src="/assets/img/GaleriaInicio/puente.jpg" alt="">
+          <img src="./assets/img/GaleriaInicio/puente.jpg" alt="">
         </li>
         <li>
-          <img src="/assets/img/GaleriaInicio/pueblo.jpg" alt="">
+          <img src="./assets/img/GaleriaInicio/pueblo.jpg" alt="">
         </li>
         <li>
-          <img src="/assets/img/GaleriaInicio/eixample.jpg" alt="">
+          <img src="./assets/img/GaleriaInicio/eixample.jpg" alt="">
         </li>
       </ul>
     </div>
@@ -52,7 +52,7 @@
 
       </div>
       <div class="col-xs-12 col-md-3">
-        <img src="/assets/img/alcalde.jpg" alt="AlcaldeFoto">
+        <img src="./assets/img/alcalde.jpg" alt="AlcaldeFoto">
         <h4>JOSE LUIS JUAN PINTER</h4>
       </div>
       <div class="col-xs-12 col-md-9">
@@ -80,7 +80,7 @@
     <div class="col-xs-12 col-md-6" *ngFor="let poligono of poligonos" id="{{poligono.id}}">
       <a [routerLink]=" ['/location'] "
          routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">
-        <img src="/assets/img/{{poligono.photo}}">
+        <img src="./assets/img/{{poligono.photo}}">
         <p>{{poligono.title}}</p>
       </a>
     </div>
