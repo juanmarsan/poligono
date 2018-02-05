@@ -1,12 +1,20 @@
-<div class="big-title-wrapper">
-	<h2>{{ title }}</h2>
-</div>
+<app-titulo-categoria [foto]="'/assets/img/fondo.png'" [titulo]="title"></app-titulo-categoria>
 
 <div class="noticia">
-<img src="/assets/img/Noticias/{{noticia?.photo}}" >
-<h1>{{noticia?.title}}</h1>
-<p>{{noticia?.descripcion}}</p>
-<p>{{noticia?.fecha}}</p>
-<p>	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+  <img src="/assets/img/Noticias/{{noticia?.photo}}">
+  <h1>{{noticia?.title}}</h1>
+  <p>{{noticia?.descripcion}}</p>
+  <p>{{noticia?.fecha}}</p>
+  <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+    sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+    pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetuer
+    adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+    parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+    Nulla consequat massa quis enim.</p>
 </div>
-<a [routerLink]="['/noticias']"> Volver</a>
+
+
+<a [routerLink]="['/noticias']">
+  <mat-icon class="arrow_back">arrow_back</mat-icon>
+  Volver
+</a>

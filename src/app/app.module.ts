@@ -28,6 +28,7 @@ import {OrdenarEmpresasPipe} from "./shared/ordenar-empresas/ordenar-empresas.pi
 import {FiltrarEmpresaIdPipe} from "./shared/filtrar/filtrar-empresa-id.pipe";
 import {MaterialModule} from "./material.module";
 import {TituloCategoriaComponent} from './shared/titulo-categoria/titulo-categoria.component';
+import {FiltrarCategoriaPipe} from "./shared/filtrar/filtrar-categoria.pipe";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {TituloCategoriaComponent} from './shared/titulo-categoria/titulo-categor
     ContactoFormComponent,
     FiltrarEmpresaIdPipe,
     OrdenarEmpresasPipe,
-    TituloCategoriaComponent
+    TituloCategoriaComponent,
+    FiltrarCategoriaPipe
   ],
   imports: [
     BrowserModule,

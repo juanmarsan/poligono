@@ -14,6 +14,7 @@ lati : number = 38.8795955;
 longi : number = -0.5966299;
 public empresas: any;
 public markers : Marker[] ;
+public title: string = "Mapa";
 
   constructor(private empresasService: EmpresasService) {
     this.empresasService.getEmpresas().subscribe(response => {

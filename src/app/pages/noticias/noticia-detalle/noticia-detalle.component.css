@@ -25,3 +25,7 @@ filter: grayscale(-50%);
 	width: 300px;
 	margin: 0 2% 2% 0;
 }
+
+a{
+  color:black;
+}

@@ -11,6 +11,9 @@ export class LocationComponent {
   public counter: number = 0;
   public empresas: any;
   public ordenarTipo: any;
+  public ordNombre: string;
+  public ordCategoria: string;
+  public ordPoligono: string;
 
   constructor(private empresasService: EmpresasService) {
     this.empresasService.getEmpresas().subscribe(response => {
