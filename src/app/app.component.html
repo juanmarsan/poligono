@@ -1,6 +1,6 @@
 
       <nav id="myTopnav" [ngClass]="isActiveBurger ? 'topnav responsive' : 'topnav'">
-        <a href="javascript:void(0);" class="icon" (click)="switchBurger()">&#9776;</a>
+        <a href="javascript:void(0);" class="icon" (click)="switchBurger()">&#9776;    &nbsp;&nbsp;  Aielo de Malferit</a>
         <a  *ngIf="isActiveBurger" [routerLink]=" ['./contacto'] " (click)="ConfigurationService.isPhone && switchBurger()"
           routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
           CONTACTO
@@ -28,11 +28,10 @@
       </div>
     </main>
 <footer>
-  <div class="footer" >
-    <div class="divPie">INFORMACIÓN</div>
-    <div class="divPie">NAVEGACIÓN WEB</div>
-    <div class="divPie">NOTICIAS</div>
-    <div class="divPie">CONTACTA</div>
+  <div class="col-xs-12 col-md-6">
+   <a href="http://www.aielodemalferit.es"> <img src="./assets/img/logo.png" alt=""></a>
+  </div>
+  <div class="col-xs-12 col-md-6">
+    <img src="./assets/img/logo-ivace.png" alt="">
   </div>
 </footer>
-

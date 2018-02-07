@@ -9,7 +9,7 @@ import {SendDataComponent} from "./pages/sendData/sendData.component"
 import {MapaComponent} from "./pages/mapa/mapa.component";
 
 const ROUTES: Routes = [
-  { path: '',      component: ContactoComponent },
+  { path: '',      loadChildren: './pages/index/index.module#IndexModule',  data: { preload: false }},
   { path: 'index', loadChildren: './pages/index/index.module#IndexModule',  data: { preload: false }},
   { path: 'contacto', component: ContactoComponent },
   { path: 'noticias',  component: NoticiasComponent},

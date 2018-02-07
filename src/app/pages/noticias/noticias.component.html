@@ -5,9 +5,8 @@
       <div class="col-xs-12 col-md-4" *ngFor="let noticia of noticias" id="{{noticia.id}}">
           <a [routerLink]="['/noticia', noticia.id]">
             <div class="titulo">
-              {{noticia.title || 'Titulo Noticia test'}}
+              {{noticia.title}}
             </div>
-            <p>{{noticia.descripcion}}</p>
             <i>{{noticia.fecha}}</i>
             <div *ngIf="isPhone">
               <img src="./assets/img/Noticias/{{noticia.imagen}}" class="imnoticiapeq" >
