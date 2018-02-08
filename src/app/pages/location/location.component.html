@@ -27,40 +27,51 @@
       </mat-form-field>
       </div>
 
-      <div class="col-xs-12 col-md-6" *ngFor="let empresa of empresas | OrdenarEmpresasPipe:ordenarTipo " id="{{empresa.id}}">
-        <mat-card class="example-card">
-          <mat-card-header>
-            <mat-card-title>{{empresa.title}}</mat-card-title>
-            <mat-card-subtitle>{{empresa.sector}}</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-image src="./assets/img/Empresas/{{empresa.photo}}">
-          <mat-card-content>
-            <mat-list>
-              <mat-list-item>
-                <mat-icon mat-list-icon>business</mat-icon>
-                {{empresa.poligono}}
-              </mat-list-item>
-              <mat-list-item>
-                <mat-icon mat-list-icon>location_on</mat-icon>
-                {{empresa.adress}}
-              </mat-list-item>
-              <mat-list-item>
-                <mat-icon mat-list-icon>phone</mat-icon>
-                {{empresa.telefono}}
-              </mat-list-item>
-              <mat-list-item>
-                <mat-icon mat-list-icon>email</mat-icon>
-                {{empresa.email}}
-              </mat-list-item>
-              <mat-list-item>
-                <mat-icon mat-list-icon>web</mat-icon>
-                {{empresa.web}}
-              </mat-list-item>
-              <mat-list-item>
-                <mat-icon mat-list-icon>near_me</mat-icon>
-                Ver en Mapa
-              </mat-list-item>
-            </mat-list>
+      <div class=" empresas col-xs-12 col-md-12" *ngFor="let empresa of empresas | OrdenarEmpresasPipe:ordenarTipo " id="{{empresa.id}}">
+              <div class="col-xs-12 col-md-12">
+
+               {{empresa.title}}
+              {{empresa.sector}}
+              </div>
+              <div class="col-xs-12 col-md-3">
+                  <img mat-card-image src="./assets/img/Empresas/{{empresa.photo}}">
+              </div>
+
+          <mat-card class="example-card col-xs-12 col-md-9">
+              <mat-card-content>
+                  <mat-list  class="col-xs-12 col-md-7">
+                      <mat-list-item >
+
+                          {{empresa.description}}
+                      </mat-list-item>
+                  </mat-list>
+
+                <mat-list  class="col-xs-12 col-md-5">
+                  <mat-list-item>
+                    <mat-icon mat-list-icon>business</mat-icon>
+                    {{empresa.poligono}}
+                  </mat-list-item>
+                  <mat-list-item>
+                    <mat-icon mat-list-icon>location_on</mat-icon>
+                    {{empresa.adress}}
+                  </mat-list-item>
+                  <mat-list-item>
+                    <mat-icon mat-list-icon>phone</mat-icon>
+                    {{empresa.telefono}}
+                  </mat-list-item>
+                  <mat-list-item>
+                    <mat-icon mat-list-icon>email</mat-icon>
+                    {{empresa.email}}
+                  </mat-list-item>
+                  <mat-list-item>
+                    <mat-icon mat-list-icon>web</mat-icon>
+                    {{empresa.web}}
+                  </mat-list-item>
+                  <mat-list-item>
+                    <mat-icon mat-list-icon>near_me</mat-icon>
+                    Ver en Mapa
+                  </mat-list-item>
+                </mat-list>
           </mat-card-content>
         </mat-card>
       </div>

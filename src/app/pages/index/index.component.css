@@ -58,5 +58,20 @@ p{
   text-align: left;
 }
 
+.poligonos a img{
+  width: 100%;
+  height: 350px;
+}
 
+.poligonos {
+  text-align: center;
+}
+
+.poligonos p {
+   text-align: center;
+ }
+
+.listarempresas{
+  text-align: center;
+}
 
