@@ -8,10 +8,10 @@
               {{noticia.title}}
             </div>
             <i>{{noticia.fecha}}</i>
-            <div *ngIf="isPhone">
+            <div *ngIf="isPhone" class="foto">
               <img src="./assets/img/Noticias/{{noticia.imagen}}" class="imnoticiapeq" >
             </div>
-            <div *ngIf="! isPhone">
+            <div *ngIf="! isPhone" class="foto">
               <img src="./assets/img/Noticias/{{noticia.imagen}}" class="imnoticia" >
             </div>
           </a>

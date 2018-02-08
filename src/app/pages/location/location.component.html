@@ -28,7 +28,7 @@
       </div>
 
       <div class=" empresas col-xs-12 col-md-12" *ngFor="let empresa of empresas | OrdenarEmpresasPipe:ordenarTipo " id="{{empresa.id}}">
-              <div class="col-xs-12 col-md-12">
+              <div class="empresa-title col-xs-12 col-md-12">
 
                {{empresa.title}}
               {{empresa.sector}}
