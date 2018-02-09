@@ -14,13 +14,13 @@
         </mat-select>
       </mat-form-field>
 
-{{poligonoFilter}}
+
 
 
      </div>
      <div class="mapa">
        <agm-map [latitude]="lati" [longitude]="longi" [zoom]="14">
-         <agm-marker *ngFor="let m of empresas | FiltrarEmpresaIdPipe: filtroEmpresas "
+         <agm-marker *ngFor="let m of empresas | FiltrarEmpresaIdPipe: filtroEmpresas | FiltrarPoligonoPipe: poligonoFilter "
                      [latitude]="m.lati" [longitude]="m.longi"></agm-marker>
        </agm-map>
      </div>

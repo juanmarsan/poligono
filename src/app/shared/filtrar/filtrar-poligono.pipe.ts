@@ -6,7 +6,7 @@ export class FiltrarPoligonoPipe implements PipeTransform {
     if(!items) return [];
     if(!poligonoId) return items;
     return items.filter( it => {
-      return it.poligono == poligonoId;
+      return it.idsector == poligonoId;
     });
   }
 }
