@@ -4,10 +4,24 @@
   <div class="content-wraper">
     <div class="content-business">
       <h2>Filtros para EMPRESAS</h2>
+      <input [(ngModel)]="filtroEmpresas" placeholder="Buscar por nombre" /> {{resultadosBusqueda}}
+
+      <mat-form-field>
+        <mat-select placeholder="Poligono" [(value)]="poligonoFilter">
+          <mat-option *ngFor="let poligono of poligonos" [value]="poligono.id" >
+            {{poligono.title}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+{{poligonoFilter}}
+
+
      </div>
      <div class="mapa">
        <agm-map [latitude]="lati" [longitude]="longi" [zoom]="14">
-         <agm-marker *ngFor="let m of markers; " [latitude]="m.lati" [longitude]="m.longi"></agm-marker>
+         <agm-marker *ngFor="let m of empresas | FiltrarEmpresaIdPipe: filtroEmpresas "
+                     [latitude]="m.lati" [longitude]="m.longi"></agm-marker>
        </agm-map>
      </div>
   </div>

@@ -1,7 +1,9 @@
 import {Component} from '@angular/core';
 import {Empresa} from '../../../core/domain/models/empresa';
 import {EmpresasService} from '../../../core/domain/services/empresasService';
-import {Marker} from "../../../core/domain/models/marker";
+import {PoligonosService} from "../../../core/domain/services/poligonosService";
+import {Poligono} from "../../../core/domain/models/poligono";
+
 
 @Component({
   selector: 'mapa-directive',
@@ -13,27 +15,30 @@ zoom : number = 10;
 lati : number = 38.8795955;
 longi : number = -0.5966299;
 public empresas: any;
-public markers : Marker[] ;
 public title: string = "Mapa";
+public filtroEmpresas: string;
+public poligonos: any;
+public poligonoFilter: string;
 
-  constructor(private empresasService: EmpresasService) {
+  constructor(private empresasService: EmpresasService,
+              private poligonoService: PoligonosService) {
     this.empresasService.getEmpresas().subscribe(response => {
       this.empresas = response;
+      this.empresas.map(elemento =>{
+        elemento.longi = parseFloat(elemento.longi);
+        elemento.lati = parseFloat(elemento.lati);
+        return elemento;
+      })
+      console.log(this.empresas)
     });
-    this.markers = [
-      {
-        nombre : 'rocheltex',
-        lati :38.8874259,
-        longi :-0.5797139,
-        arrastrable:false,
-      },
-        {
-        nombre : 'Vidrios San Miguel',
-        lati :38.884192,
-        longi : -0.583443,
-        arrastrable:false,
-      },
-    ]
+
+    this.poligonoService.getPoligonos().subscribe(poligonos =>{
+      this.poligonos = poligonos
+      console.log(this.poligonos)
+    });
+
+
+
   }
 
 

@@ -1,10 +1,13 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({name: 'FiltrarEmpresaIdPipe'})
-  export class FiltrarEmpresaIdPipe implements PipeTransform {
-  transform(values: any[], args: string[]): any {
-    if(!values || args.length==0) return values;
-        //values.filter()
-    return values;
+export class FiltrarEmpresaIdPipe implements PipeTransform {
+  transform(items: any[], searchText: string): any[] {
+    if(!items) return [];
+    if(!searchText) return items;
+    searchText = searchText.toLowerCase();
+    return items.filter( it => {
+      return it.title.toLowerCase().includes(searchText);
+    });
   }
 }

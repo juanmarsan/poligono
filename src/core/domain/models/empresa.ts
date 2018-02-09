@@ -10,6 +10,6 @@ export class Empresa{
   web: string;
   description: string;
   photo: string;
-  lati:string;
-  longi:string;
+  lati:number;
+  longi:number;
 }

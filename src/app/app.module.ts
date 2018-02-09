@@ -29,6 +29,7 @@ import {FiltrarEmpresaIdPipe} from "./shared/filtrar/filtrar-empresa-id.pipe";
 import {MaterialModule} from "./material.module";
 import {TituloCategoriaComponent} from './shared/titulo-categoria/titulo-categoria.component';
 import {FiltrarCategoriaPipe} from "./shared/filtrar/filtrar-categoria.pipe";
+import {FiltrarPoligonoPipe} from "./shared/filtrar/filtrar-poligono.pipe";
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import {FiltrarCategoriaPipe} from "./shared/filtrar/filtrar-categoria.pipe";
     FiltrarEmpresaIdPipe,
     OrdenarEmpresasPipe,
     TituloCategoriaComponent,
-    FiltrarCategoriaPipe
+    FiltrarCategoriaPipe,
+    FiltrarPoligonoPipe
   ],
   imports: [
     BrowserModule,

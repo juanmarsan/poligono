@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import {EmpresasService} from '../../../core/domain/services/empresasService';
 import {Contacto} from "../../../core/domain/models/contacto";
-import {Empresa} from "../../../core/domain/models/empresa";
-import {PoligonosService} from "../../../core/domain/services/poligonosService";
 
 @Component({
   selector: 'app-contacto-form',
@@ -14,17 +12,12 @@ export class ContactoFormComponent {
   public contactoPeticionEnviado: boolean = false;
   public contacto: Contacto;
   public empresas: any;
-  public poligonos: any;
 
-  constructor(private empresasService: EmpresasService,
-              private poligonoService: PoligonosService) {
+  constructor(private empresasService: EmpresasService) {
     this.contacto = new Contacto;
     this.contacto.telefono ="";
     this.empresasService.getEmpresas().subscribe(empresas =>{
       this.empresas = empresas
-    });
-    this.poligonoService.getPoligonos().subscribe(poligonos =>{
-      this.poligonos = poligonos
     });
   }
 
