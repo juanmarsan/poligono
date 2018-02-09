@@ -1,6 +1,7 @@
 export class Empresa{
   id: number;
   title: string;
+  idsector:string;
   sector: string;
   adress: string;
   poligono: string;
