@@ -23,7 +23,7 @@
         </mat-form-field>
 
         <mat-form-field>
-          <mat-select placeholder="Poligono" [(value)]="poligonoFilter">
+          <mat-select placeholder="Poligono" [(ngModel)]="poligonoFilter" >
             <mat-option *ngFor="let poligono of poligonos" [value]="poligono.id" >
               {{poligono.title}}
             </mat-option>

@@ -1,29 +1,27 @@
 <div class="contacto">
-  <app-titulo-categoria [foto]="'./assets/img/fondo.png'" [titulo]="title"  ></app-titulo-categoria>
+  <app-titulo-categoria [foto]="'./assets/img/fondo.png'" [titulo]="title"></app-titulo-categoria>
 
   <div class="content-wraper">
     <div class="content-business">
       <h2>Filtros para EMPRESAS</h2>
-      <input [(ngModel)]="filtroEmpresas" placeholder="Buscar por nombre" /> {{resultadosBusqueda}}
+      <input [(ngModel)]="filtroEmpresas" placeholder="Buscar por nombre"/>
 
       <mat-form-field>
         <mat-select placeholder="Poligono" [(value)]="poligonoFilter">
-          <mat-option *ngFor="let poligono of poligonos" [value]="poligono.id" >
+          <mat-option *ngFor="let poligono of poligonos" [value]="poligono.id">
             {{poligono.title}}
           </mat-option>
         </mat-select>
       </mat-form-field>
 
-
-
-
-     </div>
-     <div class="mapa">
-       <agm-map [latitude]="lati" [longitude]="longi" [zoom]="14">
-         <agm-marker *ngFor="let m of empresas | FiltrarEmpresaIdPipe: filtroEmpresas | FiltrarPoligonoPipe: poligonoFilter "
-                     [latitude]="m.lati" [longitude]="m.longi"></agm-marker>
-       </agm-map>
-     </div>
+    </div>
+    <div class="mapa">
+      <agm-map [latitude]="lati" [longitude]="longi" [zoom]="14">
+        <agm-marker
+          *ngFor="let m of empresas | FiltrarEmpresaIdPipe: filtroEmpresas | FiltrarPoligonoPipe: poligonoFilter "
+          [latitude]="m.lati" [longitude]="m.longi"></agm-marker>
+      </agm-map>
+    </div>
   </div>
 </div>
 

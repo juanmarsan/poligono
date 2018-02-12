@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {EmpresasService} from '../../../core/domain/services/empresasService';
 import {PoligonosService} from '../../../core/domain/services/poligonosService';
 import {Poligono} from '../../../core/domain/models/poligono';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'location-directive',
@@ -18,17 +19,32 @@ export class LocationComponent {
   public filtroEmpresasNombre: string;
 
   constructor(private empresasService: EmpresasService,
-              private poligonosService: PoligonosService) {
+              private poligonosService: PoligonosService,
+              private route: ActivatedRoute) {
+
+
     this.empresasService.getEmpresas().subscribe(response => {
       this.empresas = response;
     });
 
     this.poligonosService.getPoligonos().subscribe(response => {
       this.poligonos = response;
+      console.log(this.poligonos)
     });
+
+    this.route.queryParams
+      .subscribe(params => {
+        this.poligonoFilter =  String(+params['poligono']);
+      });
+
+
   }
 
+
   filterName(event: any) {
+    console.log(event)
     this.ordenarTipo = event;
   }
+
+
 }
