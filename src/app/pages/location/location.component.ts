@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {EmpresasService} from '../../../core/domain/services/empresasService';
+import {PoligonosService} from '../../../core/domain/services/poligonosService';
+import {Poligono} from '../../../core/domain/models/poligono';
 
 @Component({
   selector: 'location-directive',
@@ -11,18 +13,22 @@ export class LocationComponent {
   public counter: number = 0;
   public empresas: any;
   public ordenarTipo: any;
-  public ordNombre: string;
-  public ordCategoria: string;
-  public ordPoligono: string;
+  public poligonos: any;
+  public poligonoFilter: string;
+  public filtroEmpresasNombre: string;
 
-  constructor(private empresasService: EmpresasService) {
+  constructor(private empresasService: EmpresasService,
+              private poligonosService: PoligonosService) {
     this.empresasService.getEmpresas().subscribe(response => {
       this.empresas = response;
+    });
+
+    this.poligonosService.getPoligonos().subscribe(response => {
+      this.poligonos = response;
     });
   }
 
   filterName(event: any) {
-    console.log(event);
     this.ordenarTipo = event;
   }
 }
