@@ -34,7 +34,8 @@ export class LocationComponent {
 
     this.route.queryParams
       .subscribe(params => {
-        this.poligonoFilter =  String(+params['poligono']);
+        if(+params['poligono'])
+          this.poligonoFilter =  String(+params['poligono']);
       });
 
 
