@@ -12,7 +12,8 @@
           <form #myForm="ngForm" (ngSubmit)="sendForm(myForm.value)" *ngIf="! contactoPeticionEnviados">
             <input class="formutop" type="button" name="menos" value="<" name="menos"(click)="resNumber()">
             <input class="formutop" type="text" name="id" placeholder="id" name="id" value="{{counter}}">
-            <input class="formutop" type="button" name="mas" value=">" name="mas" (click)="addNumber()"><br>
+            <input class="formutop" type="button" name="mas" value=">" name="mas" (click)="addNumber()">
+            <input class="formutop" type="button" name="nuevo" value="Nueva Empresa"  ><br><br>
 
            <div *ngFor="let empresa of empresas | FiltrarEmpresaIdPipe: FiltrarEmpresaIdPipe " >
 

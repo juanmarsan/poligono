@@ -20,6 +20,14 @@
   margin-top: 20px;
 }
 
+col-xs-12 col-md-3 h1{
+  margin-bottom: -10px;
+}
+h3{
+  margin-top: -30px;
+  text-align: right;
+}
+
 .titulo{
   font-family: 'Oswald', sans-serif;
   font-size: 45px;
@@ -32,3 +40,4 @@
 .empresa-title{
   text-align: center;
 }
+
