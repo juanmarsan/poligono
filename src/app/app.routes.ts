@@ -7,10 +7,11 @@ import {NoticiasComponent} from "./pages/noticias/noticias.component";
 import {LocationComponent} from "./pages/location/location.component";
 import {SendDataComponent} from "./pages/sendData/sendData.component"
 import {MapaComponent} from "./pages/mapa/mapa.component";
+import {IndexComponent} from "./pages/index/index.component";
 
 const ROUTES: Routes = [
-  { path: '',      loadChildren: './pages/index/index.module#IndexModule',  data: { preload: false }},
-  { path: 'index', loadChildren: './pages/index/index.module#IndexModule',  data: { preload: false }},
+  { path: '',       pathMatch: 'full', redirectTo: 'index'},
+  { path: 'index', component: IndexComponent},
   { path: 'contacto', component: ContactoComponent },
   { path: 'noticias',  component: NoticiasComponent},
   { path: 'location',  component: LocationComponent},
