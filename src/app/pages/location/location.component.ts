@@ -29,7 +29,6 @@ export class LocationComponent {
 
     this.poligonosService.getPoligonos().subscribe(response => {
       this.poligonos = response;
-      console.log(this.poligonos)
     });
 
     this.route.queryParams
@@ -43,7 +42,6 @@ export class LocationComponent {
 
 
   filterName(event: any) {
-    console.log(event)
     this.ordenarTipo = event;
   }
 

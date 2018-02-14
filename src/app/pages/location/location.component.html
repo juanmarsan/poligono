@@ -19,15 +19,16 @@
             <mat-option [value]="'ordCategoria'">
               Por Categoria
             </mat-option>
+            <mat-option>Sin ordenar</mat-option>
           </mat-select>
         </mat-form-field>
 
         <mat-form-field>
           <mat-select placeholder="Poligono" [(ngModel)]="poligonoFilter" >
-            <mat-option>Todos</mat-option>
             <mat-option *ngFor="let poligono of poligonos" [value]="poligono.id" >
               {{poligono.title}}
             </mat-option>
+            <mat-option>Todos</mat-option>
           </mat-select>
         </mat-form-field>
 
