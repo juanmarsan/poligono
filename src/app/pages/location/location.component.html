@@ -24,6 +24,7 @@
 
         <mat-form-field>
           <mat-select placeholder="Poligono" [(ngModel)]="poligonoFilter" >
+            <mat-option>Todos</mat-option>
             <mat-option *ngFor="let poligono of poligonos" [value]="poligono.id" >
               {{poligono.title}}
             </mat-option>
