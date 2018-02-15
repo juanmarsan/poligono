@@ -31,6 +31,7 @@ import {TituloCategoriaComponent} from './shared/titulo-categoria/titulo-categor
 import {FiltrarCategoriaPipe} from "./shared/filtrar/filtrar-categoria.pipe";
 import {FiltrarPoligonoPipe} from "./shared/filtrar/filtrar-poligono.pipe";
 import {IndexComponent} from "./pages/index/index.component";
+import {SectorService} from "../core/domain/services/sectorService";
 
 @NgModule({
   declarations: [
@@ -62,7 +63,7 @@ import {IndexComponent} from "./pages/index/index.component";
     MaterialModule
 
   ],
-  providers: [NoticiasService, EmpresasService, PoligonosService, ConfigurationService],
+  providers: [NoticiasService, EmpresasService, PoligonosService, ConfigurationService, SectorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
