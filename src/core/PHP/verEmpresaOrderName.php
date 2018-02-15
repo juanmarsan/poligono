@@ -1,7 +1,7 @@
 <?php
 	header('Access-Control-Allow-Origin: *');
-	$con = mysql_connect("websalvaxzjuan.mysql.db", "websalvaxzjuan", "Juanito123"); 
-	mysql_select_db("websalvaxzjuan", $con);
+	$con = mysql_connect("www.aielodemalferit.es", "aielo_poluser", "poli44nos"); 
+	mysql_select_db("aielo_poligonos", $con);
 	
 		$sql= "SELECT e.id, e.nombre, s.nombre as 'sector',s.id as 'id_sector' e.direccion,p.nombre as 'poligono',p.id as 'id_poligono', e.telefono, e.movil, e.fax, e.email, e.web, e.descripcion, e.foto FROM empresa e INNER JOIN sector s on s.id=e.id_sector INNER JOIN poligono p on p.id=e.id_poligono order by e.nombre asc";
 

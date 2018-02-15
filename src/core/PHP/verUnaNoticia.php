@@ -1,7 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *'); 
-$con = mysql_connect("websalvaxzjuan.mysql.db", "websalvaxzjuan", "Juanito123"); 
-	mysql_select_db("websalvaxzjuan", $con);
+	$con = mysql_connect("www.aielodemalferit.es", "aielo_poluser", "poli44nos"); 
+	mysql_select_db("aielo_poligonos", $con);
 	
 		
 

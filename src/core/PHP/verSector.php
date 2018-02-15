@@ -1,10 +1,12 @@
 <?php
-	header('Access-Control-Allow-Origin: *');
-	$con = mysql_connect("www.aielodemalferit.es", "aielo_poluser", "poli44nos"); 
-	mysql_select_db("aielo_poligonos", $con);
+header('Access-Control-Allow-Origin: *'); 
+$con = mysql_connect("websalvaxzjuan.mysql.db", "websalvaxzjuan", "Juanito123"); 
+	mysql_select_db("websalvaxzjuan", $con);
 	
-		$sql= "SELECT * FROM poligono ";
+		$sql= "select * from sector";
 
+
+		
 	
 	$res = mysql_query($sql, $con);
 
@@ -12,8 +14,7 @@
 	$i=0;
 		while($row=mysql_fetch_assoc($res)){
 			$jsonarray[$i]['id'] = $row['id'];
-			$jsonarray[$i]['title'] = utf8_encode($row['nombre']);
-			$jsonarray[$i]['photo'] = utf8_encode($row['photo']);
+			$jsonarray[$i]['nombre'] = utf8_encode($row['nombre']);
 			$i++;
 			$vacio=false;
 		}
