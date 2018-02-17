@@ -1,66 +1,78 @@
 <div class="formuContacto">
-      <div class="title-form">
-            <img class="formForm" src="./assets/img/Icono/FormColor.png">
-             <h2>{{ formularioContactos }}</h2>
-              <hr>
-      </div>
-      <div class="envio">
+  <div class="title-form">
+    <img class="formForm" src="./assets/img/Icono/FormColor.png">
+    <h2>{{ formularioContactos }}</h2>
+    <hr>
+  </div>
+  <div class="envio">
 
 
-            <h2></h2>
+    <h2></h2>
 
-          <form #myForm="ngForm" (ngSubmit)="sendForm(myForm.value)" *ngIf="! contactoPeticionEnviados">
-            <input class="formutop" type="button" name="menos" value="<" name="menos"(click)="resNumber()">
-            <input class="formutop" type="text" name="id" placeholder="id" name="id" value="{{counter}}">
-            <input class="formutop" type="button" name="mas" value=">" name="mas" (click)="addNumber()">
-            <input class="formutop" type="button" name="nuevo" value="Nueva Empresa"  ><br><br>
+    <form #myForm="ngForm" (ngSubmit)="sendForm(myForm.value)" *ngIf="! contactoPeticionEnviados">
+      <input class="formutop" type="button" name="menos" value="<" name="menos" (click)="resNumber()">
+      <input class="formutop" type="text" name="id" placeholder="id" name="id" value="{{counter}}">
+      <input class="formutop" type="button" name="mas" value=">" name="mas" (click)="addNumber()">
+      <input class="formutop" type="button" name="nuevo" value="Nueva Empresa"><br><br>
 
-           <div *ngFor="let empresa of empresas | FiltrarEmpresaIdPipe: FiltrarEmpresaIdPipe " >
+      <mat-accordion>
+        <mat-expansion-panel
+          *ngFor="let empresa of empresas | FiltrarEmpresaIdPipe: FiltrarEmpresaIdPipe ; let i = index">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{empresa.title}}-{{empresa.idpoligono}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
 
-             <mat-form-field class="example-full-width">
-               <input matInput name="name" value="{{empresa.title}}"  required>
-             </mat-form-field>
-             <mat-form-field class="example-full-width">
-               <input matInput name="sectot" value="sector"  required>
-             </mat-form-field>
-             <mat-form-field class="example-full-width">
-               <input matInput name="direccion"  value="{{empresa.adress}}"    required>
-             </mat-form-field>
-             <mat-form-field class="example-full-width">
-               <input matInput name="poligono"  value="{{empresa.poligono}}"    required>
-             </mat-form-field>
-             <mat-form-field class="example-full-width">
-               <input matInput name="telefono"  value="{{empresa.telefono}}"    required>
-             </mat-form-field>
-             <mat-form-field class="example-full-width">
-               <input matInput name="movil"  value="{{empresa.movil}}"   required>
-             </mat-form-field>
-             <mat-form-field class="example-full-width">
-               <input matInput name="email"  value="{{empresa.email}}"    required>
-             </mat-form-field>
-             <mat-form-field class="example-full-width">
-               <input matInput name="web"  value="{{empresa.web}}"   required>
-             </mat-form-field>
-             <mat-form-field class="example-full-width">
-               <textarea matInput name="descripcion" value="{{empresa.description}}"  required></textarea>
-             </mat-form-field>
-             <mat-form-field class="example-full-width">
-               <input matInput name="lati" value="{{empresa.lati}}"  required>
-             </mat-form-field>
-             <mat-form-field class="example-full-width">
-               <input matInput name="foto" value="{{empresa.photo}}"  required>
-             </mat-form-field>
-             <mat-form-field class="example-full-width">
-               <input matInput name="longi" value="{{empresa.longi}}"   required>
-             </mat-form-field>
-           </div>
+          <mat-form-field class="example-full-width">
+            <input matInput name="name-{{i}}"  [(ngModel)]="empresa.title" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="sector-{{i}}" [(ngModel)]="sector" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="direccion-{{i}}" [(ngModel)]="empresa.adress" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select placeholder="Poligono" [(ngModel)]="empresa.idpoligono" name="poligono-{{i}}">
+              <mat-option *ngFor="let poligono of poligonos" [value]="poligono.id">
+                {{poligono.title}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="telefono-{{i}}" [(ngModel)]="empresa.telefono" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="movil-{{i}}" [(ngModel)]="empresa.movil" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="email-{{i}}" [(ngModel)]="empresa.email" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="web-{{i}}" [(ngModel)]="empresa.web" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <textarea matInput name="descripcion-{{i}}" [(ngModel)]="empresa.description" required></textarea>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="lati-{{i}}" [(ngModel)]="empresa.lati" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="foto-{{i}}" [(ngModel)]="empresa.photo" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="longi-{{i}}" [(ngModel)]="empresa.longi" required>
+          </mat-form-field>
+        </mat-expansion-panel>
+      </mat-accordion>
 
-        <button class="btnEnvio" type="submit" [disabled]="! myForm.form.valid"  name="send" >
-              <img class="imagenEnvio" src="./assets/img/btnEnviar.png">
-            </button>
-          </form>
-      </div>
-      <div *ngIf="contactoPeticionEnviados">
-        FORMULARIO ENVIADO, LES CONTACTAREMOS PRONTO
-      </div>
+      <button class="btnEnvio" type="submit" [disabled]="! myForm.form.valid" name="send">
+        <img class="imagenEnvio" src="./assets/img/btnEnviar.png">
+      </button>
+    </form>
+  </div>
+  <div *ngIf="contactoPeticionEnviados">
+    FORMULARIO ENVIADO, LES CONTACTAREMOS PRONTO
+  </div>
 </div>
