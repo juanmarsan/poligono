@@ -37,12 +37,10 @@ public sectores: any;
 
     this.poligonoService.getPoligonos().subscribe(poligonos =>{
       this.poligonos = poligonos
-      console.log(this.poligonos)
     });
 
     this.sectorService.getSectores().subscribe(sectores =>{
       this.sectores = sectores
-      console.log(this.sectores)
     });
 
 

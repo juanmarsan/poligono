@@ -13,22 +13,77 @@
       <input class="formutop" type="button" name="menos" value="<" name="menos" (click)="resNumber()">
       <input class="formutop" type="text" name="id" placeholder="id" name="id" value="{{counter}}">
       <input class="formutop" type="button" name="mas" value=">" name="mas" (click)="addNumber()">
-      <input class="formutop" type="button" name="nuevo" value="Nueva Empresa"><br><br>
+      <input class="formutop" type="button" name="nuevo" value="Nueva Empresa" (click)="mostrarNuevaEmpresa = true"><br><br>
 
       <mat-accordion>
+        <mat-expansion-panel *ngIf="mostrarNuevaEmpresa">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+             New: {{nuevaEmpresa.title}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field class="example-full-width">
+            <input matInput name="name-new"  [(ngModel)]="nuevaEmpresa.title" placeholder="Titulo" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select placeholder="Sector" [(ngModel)]="nuevaEmpresa.idsector" name="sector-new">
+              <mat-option *ngFor="let sector of sectores" [value]="sector.id">
+                {{sector.nombre}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="direccion-new" [(ngModel)]="nuevaEmpresa.adress" required>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select placeholder="Poligono" [(ngModel)]="nuevaEmpresa.idpoligono" name="poligono-new">
+              <mat-option *ngFor="let poligono of poligonos" [value]="poligono.id">
+                {{poligono.title}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="telefono-new" [(ngModel)]="nuevaEmpresa.telefono" placeholder="Telefono">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="movil-new" [(ngModel)]="nuevaEmpresa.movil" placeholder="Movil">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="email-new" [(ngModel)]="nuevaEmpresa.email" placeholder="Email" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="web-new" [(ngModel)]="nuevaEmpresa.web" placeholder="Web">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <textarea matInput name="descripcion-new" [(ngModel)]="nuevaEmpresa.description" placeholder="Descripcion" required></textarea>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="lati-new" [(ngModel)]="nuevaEmpresa.lati" placeholder="Latitud" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="foto-new" [(ngModel)]="nuevaEmpresa.photo" placeholder="Foto" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput name="longi-new" placeholder="Longitud" [(ngModel)]="nuevaEmpresa.longi" required>
+          </mat-form-field>
+        </mat-expansion-panel>
         <mat-expansion-panel
           *ngFor="let empresa of empresas | FiltrarEmpresaIdPipe: FiltrarEmpresaIdPipe ; let i = index">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              {{empresa.title}}-{{empresa.idpoligono}}
+              {{empresa.title}}
             </mat-panel-title>
           </mat-expansion-panel-header>
 
           <mat-form-field class="example-full-width">
-            <input matInput name="name-{{i}}"  [(ngModel)]="empresa.title" required>
+            <input matInput name="name-{{i}}"  [(ngModel)]="empresa.title" placeholder="Titulo" required>
           </mat-form-field>
-          <mat-form-field class="example-full-width">
-            <input matInput name="sector-{{i}}" [(ngModel)]="sector" required>
+          <mat-form-field>
+            <mat-select placeholder="Sector" [(ngModel)]="empresa.idsector" name="sector-{{i}}">
+              <mat-option *ngFor="let sector of sectores" [value]="sector.id">
+                {{sector.nombre}}
+              </mat-option>
+            </mat-select>
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <input matInput name="direccion-{{i}}" [(ngModel)]="empresa.adress" required>
@@ -41,28 +96,28 @@
             </mat-select>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="telefono-{{i}}" [(ngModel)]="empresa.telefono" required>
+            <input matInput name="telefono-{{i}}" [(ngModel)]="empresa.telefono" placeholder="Telefono">
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="movil-{{i}}" [(ngModel)]="empresa.movil" required>
+            <input matInput name="movil-{{i}}" [(ngModel)]="empresa.movil" placeholder="Movil">
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="email-{{i}}" [(ngModel)]="empresa.email" required>
+            <input matInput name="email-{{i}}" [(ngModel)]="empresa.email" placeholder="Email" required>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="web-{{i}}" [(ngModel)]="empresa.web" required>
+            <input matInput name="web-{{i}}" [(ngModel)]="empresa.web" placeholder="Web">
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <textarea matInput name="descripcion-{{i}}" [(ngModel)]="empresa.description" required></textarea>
+            <textarea matInput name="descripcion-{{i}}" [(ngModel)]="empresa.description" placeholder="Descripcion" required></textarea>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="lati-{{i}}" [(ngModel)]="empresa.lati" required>
+            <input matInput name="lati-{{i}}" [(ngModel)]="empresa.lati" placeholder="Latitud" required>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="foto-{{i}}" [(ngModel)]="empresa.photo" required>
+            <input matInput name="foto-{{i}}" [(ngModel)]="empresa.photo" placeholder="Foto" required>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="longi-{{i}}" [(ngModel)]="empresa.longi" required>
+            <input matInput name="longi-{{i}}" placeholder="Longitud" [(ngModel)]="empresa.longi" required>
           </mat-form-field>
         </mat-expansion-panel>
       </mat-accordion>

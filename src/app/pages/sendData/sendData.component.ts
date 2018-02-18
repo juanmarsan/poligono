@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {EmpresasService} from '../../../core/domain/services/empresasService';
 import {Empresa} from '../../../core/domain/models/empresa';
 import {PoligonosService} from '../../../core/domain/services/poligonosService';
+import {SectorService} from '../../../core/domain/services/sectorService';
 
 @Component({
   selector: 'app-sendData-form',
@@ -15,11 +16,15 @@ export class SendDataComponent {
   public ordenarTipo: any;
   public poligonos: any;
   public empresas: any;
-public listaCli: Empresa[];
+  public sectores: any;
+  public nuevaEmpresa: Empresa = new Empresa();
+  public mostrarNuevaEmpresa: boolean = false;
+
 
 
   constructor(private empresasService: EmpresasService,
-              private poligonosService: PoligonosService) {
+              private poligonosService: PoligonosService,
+              private sectorService: SectorService) {
     this.empresasService.getEmpresas().subscribe(response => {
       this.empresas = response;
     });
@@ -28,12 +33,16 @@ public listaCli: Empresa[];
       this.poligonos = response;
     });
 
+    this.sectorService.getSectores().subscribe(sectores =>{
+      this.sectores = sectores
+      console.log(this.sectores);
+    });
+
   }
 
   sendForm(values: any) {
-      console.log(values);
     console.log(this.empresas[0]);
-      this.empresasService.insertEmpresa(values).subscribe(
+      this.empresasService.insertEmpresa(this.empresas).subscribe(
         response => {
             console.log('enviado');
             this.contactoPeticionEnviados = true;
@@ -56,6 +65,11 @@ public listaCli: Empresa[];
   filterName(event: any) {
     console.log(event);
     this.ordenarTipo = event;
+  }
+
+  anadirNuevo() {
+    this.empresas.push(this.nuevaEmpresa);
+
   }
 
 
