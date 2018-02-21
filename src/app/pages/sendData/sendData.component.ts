@@ -27,6 +27,7 @@ export class SendDataComponent {
               private sectorService: SectorService) {
     this.empresasService.getEmpresas().subscribe(response => {
       this.empresas = response;
+      console.log(this.empresas);
     });
 
     this.poligonosService.getPoligonos().subscribe(response => {
@@ -42,6 +43,9 @@ export class SendDataComponent {
 
   sendForm(values: any) {
     console.log(this.empresas[0]);
+    if(this.mostrarNuevaEmpresa && this.nuevaEmpresa.title ){
+      this.empresas.push(this.nuevaEmpresa)
+    }
       this.empresasService.insertEmpresa(this.empresas).subscribe(
         response => {
             console.log('enviado');
