@@ -15,7 +15,7 @@ export class SendDataComponent {
   public counter: number = 0;
   public ordenarTipo: any;
   public poligonos: any;
-  public empresas: any;
+  public empresas: Empresa[];
   public sectores: any;
   public nuevaEmpresa: Empresa = new Empresa();
   public mostrarNuevaEmpresa: boolean = false;
@@ -25,10 +25,8 @@ export class SendDataComponent {
   constructor(private empresasService: EmpresasService,
               private poligonosService: PoligonosService,
               private sectorService: SectorService) {
-    this.empresasService.getEmpresas().subscribe(response => {
-      this.empresas = response;
-      console.log(this.empresas);
-    });
+
+    this.getAllEmpresas()
 
     this.poligonosService.getPoligonos().subscribe(response => {
       this.poligonos = response;
@@ -50,10 +48,15 @@ export class SendDataComponent {
         response => {
             console.log('enviado');
             this.contactoPeticionEnviados = true;
+            this.getAllEmpresas();
+            this.mostrarNuevaEmpresa = false;
+            this.nuevaEmpresa = new Empresa();
         },
         error => {
             console.log('error al enviar');
             this.contactoPeticionEnviados = false;
+          this.mostrarNuevaEmpresa = false;
+          this.nuevaEmpresa = new Empresa();
         }
       )
   }
@@ -73,7 +76,12 @@ export class SendDataComponent {
 
   anadirNuevo() {
     this.empresas.push(this.nuevaEmpresa);
+  }
 
+  getAllEmpresas(){
+    this.empresasService.getEmpresas().subscribe(response => {
+      this.empresas = response;
+    });
   }
 
 

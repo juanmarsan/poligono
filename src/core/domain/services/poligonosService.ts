@@ -4,18 +4,27 @@ import 'rxjs/add/operator/map';
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {IPoligonosService} from './contracts/iPoligonosService';
+import {of} from "rxjs/observable/of";
+import {Observable} from "rxjs";
 
 @Injectable()
 export class PoligonosService implements IPoligonosService {
   url: string = 'http://www.web-salva.com/juan/verPoligono.php';
+  private poligonos: Poligono[] = [];
 
-  constructor(private http: HttpClient) {}
-
-  getPoligonos() {
-    return this.http.get(this.url).map(this.extractData);
+  constructor(private http: HttpClient) {
   }
 
-  private extractData(res: Response) {
-    return res;
+  getPoligonos(): Observable<Poligono[]> {
+
+    if (this.poligonos.length > 0) {
+      return of(this.poligonos)
+    }
+
+    return this.http.get(this.url).map((response: any) => {
+      this.poligonos = <Poligono[]>response;
+      return response;
+    });
   }
+
 }

@@ -4,18 +4,29 @@ import {Injectable} from '@angular/core';
 
 import {ISectorService} from "./contracts/iSectorService";
 import {Response} from "@angular/http";
+import {Observable} from "rxjs";
+import {of} from "rxjs/observable/of";
 
 
 @Injectable()
 export class SectorService implements ISectorService {
-  misSectores: Array<any> =  [];
+  private misSectores: Array<any> =  [];
   url: string = 'http://www.web-salva.com/juan/verSector.php';
+
 
 
   constructor(private http: HttpClient) {}
 
-  getSectores() {
-    return this.http.get(this.url).map(this.extractData);
+
+  getSectores(force?:boolean): Observable<any> {
+    if(this.misSectores.length > 0)
+      return of(this.misSectores)
+
+    return this.http.get(this.url).map((response: any)=>{
+      this.misSectores = response;
+      let apiResponse = response;
+      return apiResponse;
+    });
   }
 
 

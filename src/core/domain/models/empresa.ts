@@ -1,5 +1,5 @@
 export class Empresa{
-  id: number;
+  id?: number;
   title: string;
   idsector:string;
   sector: string;
