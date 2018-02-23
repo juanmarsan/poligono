@@ -1,44 +1,54 @@
 <?php
-	header('Access-Control-Allow-Origin: *');
-	$con = mysql_connect("www.aielodemalferit.es", "aielo_poluser", "poli44nos"); 
-	mysql_select_db("aielo_poligonos", $con);
+header('Access-Control-Allow-Origin: *'); 
+$con = mysql_connect("websalvaxzjuan.mysql.db", "websalvaxzjuan", "Juanito123"); 
+	mysql_select_db("websalvaxzjuan", $con);
 
 	$request_body = file_get_contents('php://input');
 	$data = json_decode($request_body);
+	//var_dump($data) ;
 
-	$nombre = $data->nombre;
-	$id_sector = $data->sector;
-	$direccion = $data->direccion;
-	$id_poligono = $data->poligono;
-	$telefono = $data->telefono;
-	$movil = $data->movil;
-	$email = $data->email;
-	$web = $data->web;
-	$descripcion = $data->description;
-	$foto = $data->photo;
-	$lati = $data->lati;
-	$longi = $data->longi;
+foreach ($data as  $empresa) {echo'aqui entra   ';
 
+	if($empresa->id !=""){
+		$sql="UPDATE empresa SET
+			nombre='".$empresa->title."'
+			,id_sector='".$empresa->idsector."'
+			,direccion='".$empresa->adress."'
+			,id_poligono='" .$empresa->idpoligono."'
+			,telefono='" .$empresa->telefono."'
+			,movil='" .$empresa->movil."'
+			,email='" .$empresa->email."'
+			,web='" .$empresa->web."'
+			,descripcion='" .$empresa->description."'
+			,foto='" .$empresa->photo."'
+			,lati='" .$empresa->lati."'
+			,longi='" .$empresa->longi."' 
 
+		WHERE id=".$empresa->id;
 
-	
-		$sql= "INSERT INTO poligono ( `nombre`, `id_sector`, `direccion`, `id_poligono`, `telefono`, `movil`, `email`, `web`, `descripcion`, `foto`, `lati`, `longi`)  VALUES (
-" .$nombre."
-," .$id_sector."
-," .$direccion."
-," .$id_poligono."
-," .$telefono."
-," .$movil."
-," .$email."
-," .$web."
-," .$descripcion."
-," .$lati."
-," .$longi.".") ";
-
-
-		
-	
+	}else{
+echo'1   ';
+		$sql= "INSERT INTO empresa ( nombre, id_sector, direccion, id_poligono, telefono, movil, email, web, descripcion, foto, lati, longi)  VALUES (
+			'".$empresa->title."'
+			,'" .$empresa->idsector."'
+			,'" .$empresa->adress."'
+			,'" .$empresa->idpoligono."'
+			,'" .$empresa->telefono."'
+			,'" .$empresa->movil."'
+			,'" .$empresa->email."'
+			,'" .$empresa->web."'
+			,'" .$empresa->description."'
+			,'" .$empresa->photo."'
+			,'" .$empresa->lati."'
+			,'" .$empresa->longi."') ";
+	echo'2   ';
+	}	
 	$res = mysql_query($sql, $con);
+}
+
+		echo'ff   ';
+	
+	
 
 	$i=0;
 	if(!$res){

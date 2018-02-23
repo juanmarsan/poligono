@@ -32,6 +32,15 @@
           </mat-select>
         </mat-form-field>
 
+         <mat-form-field>
+          <mat-select placeholder="Sector" [(ngModel)]="poligonoFilter" >
+            <mat-option *ngFor="let poligono of poligonos" [value]="poligono.id" >
+              {{poligono.title}}
+            </mat-option>
+            <mat-option>Todos</mat-option>
+          </mat-select>
+        </mat-form-field>
+
         <input [(ngModel)]="filtroEmpresasNombre" placeholder="Buscar por nombre" />
       </div>
 
@@ -72,7 +81,7 @@
                 </mat-list-item>
                 <mat-list-item>
                   <mat-icon mat-list-icon>near_me</mat-icon>
-                  Ver en Mapa
+                  <a target="_blank" jstcache="2" href="https://maps.google.com/maps?ll=38.883,-0.5883903&amp;z=15&amp;t=m&amp;hl=es-ES&amp;gl=US&amp;mapclient=embed&amp;q=38%C2%B052'47.224%22N%200%C2%B000'35%18.205W@{{empresa.lati}},{{empresa.longi}}" jsaction="mouseup:defaultCard.largerMap" class="google-maps-link">Ver en MAPS</a>        
                 </mat-list-item>
               </mat-list>
             </mat-card-content>

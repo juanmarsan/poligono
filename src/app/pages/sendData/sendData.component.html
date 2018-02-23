@@ -58,10 +58,10 @@
             <textarea matInput name="descripcion-new" [(ngModel)]="nuevaEmpresa.description" placeholder="Descripcion" required></textarea>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="lati-new" [(ngModel)]="nuevaEmpresa.lati" placeholder="Latitud" required>
+            <input matInput name="foto-new" [(ngModel)]="nuevaEmpresa.photo" placeholder="Foto" required>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="foto-new" [(ngModel)]="nuevaEmpresa.photo" placeholder="Foto" required>
+            <input matInput name="lati-new" [(ngModel)]="nuevaEmpresa.lati" placeholder="Latitud" required>
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <input matInput name="longi-new" placeholder="Longitud" [(ngModel)]="nuevaEmpresa.longi" required>
@@ -86,7 +86,7 @@
             </mat-select>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="direccion-{{i}}" [(ngModel)]="empresa.adress" required>
+            <input matInput name="direccion-{{i}}"  [(ngModel)]="empresa.adress" required placeholder="Dirección">
           </mat-form-field>
           <mat-form-field>
             <mat-select placeholder="Poligono" [(ngModel)]="empresa.idpoligono" name="poligono-{{i}}">
@@ -111,10 +111,10 @@
             <textarea matInput name="descripcion-{{i}}" [(ngModel)]="empresa.description" placeholder="Descripcion" required></textarea>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="lati-{{i}}" [(ngModel)]="empresa.lati" placeholder="Latitud" required>
+            <input matInput name="foto-{{i}}" [(ngModel)]="empresa.photo" placeholder="Foto" required>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="foto-{{i}}" [(ngModel)]="empresa.photo" placeholder="Foto" required>
+            <input matInput name="lati-{{i}}" [(ngModel)]="empresa.lati" placeholder="Latitud" required>
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <input matInput name="longi-{{i}}" placeholder="Longitud" [(ngModel)]="empresa.longi" required>
