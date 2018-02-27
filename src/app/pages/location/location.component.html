@@ -33,9 +33,9 @@
         </mat-form-field>
 
          <mat-form-field>
-          <mat-select placeholder="Sector" [(ngModel)]="poligonoFilter" >
-            <mat-option *ngFor="let poligono of poligonos" [value]="poligono.id" >
-              {{poligono.title}}
+          <mat-select placeholder="Sector" [(ngModel)]="sectorFilter" >
+            <mat-option *ngFor="let sector of sectores" [value]="sector.id" >
+              {{sector.nombre}}
             </mat-option>
             <mat-option>Todos</mat-option>
           </mat-select>
@@ -44,7 +44,7 @@
         <input [(ngModel)]="filtroEmpresasNombre" placeholder="Buscar por nombre" />
       </div>
 
-      <div class=" empresas col-xs-12 col-md-12" *ngFor="let empresa of empresas | OrdenarEmpresasPipe:ordenarTipo | FiltrarPoligonoPipe: poligonoFilter | FiltrarEmpresaIdPipe: filtroEmpresasNombre "
+      <div class=" empresas col-xs-12 col-md-12" *ngFor="let empresa of empresas | OrdenarEmpresasPipe:ordenarTipo | FiltrarPoligonoPipe: poligonoFilter | FiltrarEmpresaIdPipe: filtroEmpresasNombre | FiltrarSectorPipe: sectorFilter"
            id="{{empresa.id}}">
         <div class="col-xs-12 col-md-3">
           <img mat-card-image src="./assets/img/Empresas/{{empresa.photo}}">

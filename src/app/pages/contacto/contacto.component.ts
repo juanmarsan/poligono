@@ -12,9 +12,9 @@ export class ContactoComponent {
 
   public lugar : string = 'Ayuntamiento. Plaza Palacio 1';
   public poblacion : string = '46812 - Aielo de Malferit';
-  public telefono : string = '666 999 111';
-  public mail : string = 'msil@mail.mail';
-  public horario : string = ' L -V de 10:00 a 12:00';
+  public telefono : string = '96 236 30 10';
+  public mail : string = '@cv.gva.es';
+  public horario : string = ' L -V de 10:00 a 14:00';
   public formularioContacto : string = 'FORMULARIO DE CONTACTO';
   public counter: number = 0;
 

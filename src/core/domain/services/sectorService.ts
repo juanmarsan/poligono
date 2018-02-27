@@ -1,7 +1,7 @@
 import 'rxjs/add/operator/map';
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
-
+import {Sector} from '../models/sector';
 import {ISectorService} from "./contracts/iSectorService";
 import {Response} from "@angular/http";
 import {Observable} from "rxjs";
@@ -12,7 +12,7 @@ import {of} from "rxjs/observable/of";
 export class SectorService implements ISectorService {
   private misSectores: Array<any> =  [];
   url: string = 'http://www.web-salva.com/juan/verSector.php';
-
+  private sectores: Sector[] = [];
 
 
   constructor(private http: HttpClient) {}
@@ -28,6 +28,7 @@ export class SectorService implements ISectorService {
       return apiResponse;
     });
   }
+
 
 
   private extractData(res: Response) {

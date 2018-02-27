@@ -13,24 +13,27 @@ aixo vol dir que en xocoteta tens un bloc per linia i en gran tens 2-->
             <mat-card-title>Aielo de Malferit</mat-card-title>
             <mat-card-subtitle>Vall D'Albaida</mat-card-subtitle>
           </mat-card-header>
-          <img mat-card-image src="./assets/img/Palau.jpg">
+          <img mat-card-image class="foto" src="./assets/img/Palau.jpg">
           <mat-card-content>
             <p>
               {{textoContacto}}
             </p>
           </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>LIKE  <mat-icon class="example-icon">group_add</mat-icon></button>
-            <button mat-button>SHARE <mat-icon class="example-icon">share</mat-icon></button>
-          </mat-card-actions>
+          <!--
+            <mat-card-actions>
+                <button mat-button>LIKE  <mat-icon class="example-icon">group_add</mat-icon></button>
+                <button mat-button>SHARE <mat-icon class="example-icon">share</mat-icon></button>
+              </mat-card-actions> 
+          -->
         </mat-card>
+         
       </div>
       <div class="col-xs-12 col-md-12">
-        <mat-card class="example-card">
+        <mat-card class="example-card info">
           <mat-card-content>
             <!--JUAN: esto crea un element material de tipo, llista -->
             <mat-list>
-              <h3 mat-subheader>Informationes:</h3>
+              <h3 mat-subheader>Información:</h3>
               <mat-list-item>
                 <mat-icon mat-list-icon>add_location</mat-icon>
                 <h4 mat-line>{{lugar}}</h4>
@@ -38,11 +41,11 @@ aixo vol dir que en xocoteta tens un bloc per linia i en gran tens 2-->
               </mat-list-item>
               <mat-list-item>
                 <mat-icon mat-list-icon>call</mat-icon>
-                <h4 mat-line>{{telefono}}</h4>
+                <h4 mat-line> <a href="tel:+34{{telefono}}"> {{telefono}}</a></h4>
               </mat-list-item>
               <mat-list-item>
                 <mat-icon mat-list-icon>chat</mat-icon>
-                <h4 mat-line>{{mail}}</h4>
+                <h4 mat-line>  <a  target="_blank" href="mailto:{{mail}}">{{mail}}</a></h4>
               </mat-list-item>
               <mat-list-item>
                 <mat-icon mat-list-icon>query_builder</mat-icon>

@@ -21,6 +21,7 @@ public filtroEmpresas: string;
 public poligonos: any;
 public poligonoFilter: string;
 public sectores: any;
+public sectoresFilter: string;
 
   constructor(private empresasService: EmpresasService,
               private poligonoService: PoligonosService,

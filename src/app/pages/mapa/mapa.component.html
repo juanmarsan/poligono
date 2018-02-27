@@ -14,11 +14,20 @@
         </mat-select>
       </mat-form-field>
 
+      <mat-form-field>
+          <mat-select placeholder="Sector" [(ngModel)]="sectorFilter" >
+            <mat-option *ngFor="let sector of sectores" [value]="sector.id" >
+              {{sector.nombre}}
+            </mat-option>
+            <mat-option>Todos</mat-option>
+          </mat-select>
+        </mat-form-field>
+
     </div>
     <div class="mapa">
       <agm-map [latitude]="lati" [longitude]="longi" [zoom]="14">
         <agm-marker
-          *ngFor="let m of empresas | FiltrarEmpresaIdPipe: filtroEmpresas | FiltrarPoligonoPipe: poligonoFilter "
+          *ngFor="let m of empresas | FiltrarEmpresaIdPipe: filtroEmpresas | FiltrarPoligonoPipe: poligonoFilter | FiltrarSectorPipe: sectorFilter "
           [latitude]="m.lati" [longitude]="m.longi"></agm-marker>
       </agm-map>
     </div>
