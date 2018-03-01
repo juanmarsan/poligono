@@ -15,20 +15,30 @@
       </mat-form-field>
 
       <mat-form-field>
-          <mat-select placeholder="Sector" [(ngModel)]="sectorFilter" >
-            <mat-option *ngFor="let sector of sectores" [value]="sector.id" >
-              {{sector.nombre}}
-            </mat-option>
-            <mat-option>Todos</mat-option>
-          </mat-select>
-        </mat-form-field>
+        <mat-select placeholder="Sector" [(ngModel)]="sectorFilter">
+          <mat-option *ngFor="let sector of sectores" [value]="sector.id">
+            {{sector.nombre}}
+          </mat-option>
+          <mat-option>Todos</mat-option>
+        </mat-select>
+      </mat-form-field>
 
     </div>
     <div class="mapa">
       <agm-map [latitude]="lati" [longitude]="longi" [zoom]="14">
         <agm-marker
           *ngFor="let m of empresas | FiltrarEmpresaIdPipe: filtroEmpresas | FiltrarPoligonoPipe: poligonoFilter | FiltrarSectorPipe: sectorFilter "
-          [latitude]="m.lati" [longitude]="m.longi"></agm-marker>
+          [latitude]="m.lati" [longitude]="m.longi">
+          <agm-info-window [disableAutoPan]="true">
+           {{m.title}}
+           <mat-list>
+            <mat-list-item>
+                  <mat-icon mat-list-icon>near_me</mat-icon>
+                  <a target="_blank" jstcache="2" href="https://maps.google.com/maps?ll=38.883,-0.5883903&amp;z=15&amp;t=m&amp;hl=es-ES&amp;gl=US&amp;mapclient=embed&amp;q=38%C2%B052'47.224%22N%200%C2%B000'35%18.205W@{{m.lati}},{{m.longi}}" jsaction="mouseup:defaultCard.largerMap" class="google-maps-link">Ver en MAPS</a>        
+                </mat-list-item>
+              </mat-list>
+          </agm-info-window>
+        </agm-marker>
       </agm-map>
     </div>
   </div>

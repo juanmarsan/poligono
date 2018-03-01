@@ -4,11 +4,11 @@ header('Access-Control-Allow-Origin: *');
 	$request_body = file_get_contents('php://input');
 	$data = json_decode($request_body);
 
-	$nombre = $data->nombre;
+	$nombre = $data->name;
 	$email = $data->email;
 	$telefono = $data->telefono;
-	$mensaje = $data->Comentarios;
-	$contenido = "Nombre: " .$nombre. "\nCorreo: " .$email. "\nTelefono: " .$telefono. "\nMensaje: " .$mensaje;
+	$mensaje = $data->comment;
+	$contenido = "Nombre: " .$nombre. "<br>\nCorreo: " .$email. "<br>\nTelefono: " .$telefono. "<br>\nMensaje: " .$mensaje;
 
 	$headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";

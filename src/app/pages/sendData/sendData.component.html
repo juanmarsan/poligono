@@ -10,9 +10,6 @@
     <h2></h2>
 
     <form #myForm="ngForm" (ngSubmit)="sendForm(myForm.value)" *ngIf="! contactoPeticionEnviados">
-      <input class="formutop" type="button" name="menos" value="<" name="menos" (click)="resNumber()">
-      <input class="formutop" type="text" name="id" placeholder="id" name="id" value="{{counter}}">
-      <input class="formutop" type="button" name="mas" value=">" name="mas" (click)="addNumber()">
       <input class="formutop" type="button" name="nuevo" value="Nueva Empresa" (click)="mostrarNuevaEmpresa = true"><br><br>
 
       <mat-accordion>
@@ -33,7 +30,7 @@
             </mat-select>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="direccion-new" [(ngModel)]="nuevaEmpresa.adress" required>
+            <input matInput placeholder="Dirección" name="direccion-new" [(ngModel)]="nuevaEmpresa.adress" required>
           </mat-form-field>
           <mat-form-field>
             <mat-select placeholder="Poligono" [(ngModel)]="nuevaEmpresa.idpoligono" name="poligono-new">
@@ -49,7 +46,7 @@
             <input matInput name="movil-new" [(ngModel)]="nuevaEmpresa.movil" placeholder="Movil">
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="email-new" [(ngModel)]="nuevaEmpresa.email" placeholder="Email" required>
+            <input matInput name="email-new" [(ngModel)]="nuevaEmpresa.email" placeholder="Email" >
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <input matInput name="web-new" [(ngModel)]="nuevaEmpresa.web" placeholder="Web">
@@ -58,7 +55,7 @@
             <textarea matInput name="descripcion-new" [(ngModel)]="nuevaEmpresa.description" placeholder="Descripcion" required></textarea>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="foto-new" [(ngModel)]="nuevaEmpresa.photo" placeholder="Foto" required>
+            <input matInput name="foto-new" [(ngModel)]="nuevaEmpresa.photo" placeholder="Foto" >
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <input matInput name="lati-new" [(ngModel)]="nuevaEmpresa.lati" placeholder="Latitud" required>
@@ -102,7 +99,7 @@
             <input matInput name="movil-{{i}}" [(ngModel)]="empresa.movil" placeholder="Movil">
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="email-{{i}}" [(ngModel)]="empresa.email" placeholder="Email" required>
+            <input matInput name="email-{{i}}" [(ngModel)]="empresa.email" placeholder="Email" >
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <input matInput name="web-{{i}}" [(ngModel)]="empresa.web" placeholder="Web">
@@ -111,7 +108,7 @@
             <textarea matInput name="descripcion-{{i}}" [(ngModel)]="empresa.description" placeholder="Descripcion" required></textarea>
           </mat-form-field>
           <mat-form-field class="example-full-width">
-            <input matInput name="foto-{{i}}" [(ngModel)]="empresa.photo" placeholder="Foto" required>
+            <input matInput name="foto-{{i}}" [(ngModel)]="empresa.photo" placeholder="Foto" >
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <input matInput name="lati-{{i}}" [(ngModel)]="empresa.lati" placeholder="Latitud" required>
@@ -119,6 +116,7 @@
           <mat-form-field class="example-full-width">
             <input matInput name="longi-{{i}}" placeholder="Longitud" [(ngModel)]="empresa.longi" required>
           </mat-form-field>
+          
         </mat-expansion-panel>
       </mat-accordion>
 

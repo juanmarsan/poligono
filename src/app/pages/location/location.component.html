@@ -67,15 +67,19 @@
                   <mat-icon mat-list-icon>location_on</mat-icon>
                   {{empresa.adress}}
                 </mat-list-item>
-                <mat-list-item>
+                <mat-list-item *ngIf="empresa.telefono">
                   <mat-icon mat-list-icon>phone</mat-icon>
                   <a href="tel:+34{{empresa.telefono}}"> {{empresa.telefono}}</a>
                 </mat-list-item>
-                <mat-list-item>
+                <mat-list-item *ngIf="empresa.movil">
+                 <mat-icon mat-list-icon>phone_iphone</mat-icon>
+                       <a href="tel:+34{{empresa.movil}}"> {{empresa.movil}}</a>
+                </mat-list-item>
+                <mat-list-item *ngIf="empresa.email">
                   <mat-icon mat-list-icon>email</mat-icon>
                   <a  target="_blank" href="mailto:{{empresa.email}}">{{empresa.email}}</a>
                 </mat-list-item>
-                <mat-list-item>
+                <mat-list-item *ngIf="empresa.web">
                   <mat-icon mat-list-icon>web</mat-icon>
                   <a   target="_blank" href="http:\\{{empresa.web}}">{{empresa.web}}</a>
                 </mat-list-item>

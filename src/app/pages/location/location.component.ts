@@ -28,6 +28,7 @@ export class LocationComponent {
 
     this.empresasService.getEmpresas().subscribe(response => {
       this.empresas = response;
+      console.log(this.empresas)
     });
 
     this.poligonosService.getPoligonos().subscribe(response => {

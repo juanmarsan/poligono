@@ -61,18 +61,6 @@ export class SendDataComponent {
       )
   }
 
-  addNumber() {
-    this.counter++;
-    this.filterName("ordId");
-  }
-  resNumber() {
-    this.counter--;
-    this.filterName("ordId");
-  }
-  filterName(event: any) {
-    console.log(event);
-    this.ordenarTipo = event;
-  }
 
   anadirNuevo() {
     this.empresas.push(this.nuevaEmpresa);
