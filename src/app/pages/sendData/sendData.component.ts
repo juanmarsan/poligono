@@ -10,7 +10,7 @@ import {SectorService} from '../../../core/domain/services/sectorService';
   styleUrls: ['./sendData.component.css']
 })
 export class SendDataComponent {
-  public formularioContactos : string = 'Añadir Empresas';
+  public formularioContactos : string = 'Añadir y Modificar Empresas';
   public contactoPeticionEnviados: boolean = false;
   public counter: number = 0;
   public ordenarTipo: any;

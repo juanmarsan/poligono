@@ -1,14 +1,14 @@
-import { AppPage } from './app.po';
+import { PoligonoPage } from './app.po';
 
-describe('poligono App', () => {
-  let page: AppPage;
+describe('poligono App', function() {
+  let page: PoligonoPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new PoligonoPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });

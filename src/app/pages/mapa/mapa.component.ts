@@ -11,7 +11,7 @@ import {SectorService} from "../../../core/domain/services/sectorService";
 })
 export class MapaComponent {
   zoom: number = 10;
-  lati: number = 38.8795955;
+  lati: number = 38.8882;
   longi: number = -0.5966299;
   public empresas: any;
   public title: string = "Mapa";
@@ -19,7 +19,7 @@ export class MapaComponent {
   public poligonos: any;
   public poligonoFilter: string;
   public sectores: any;
-  public sectoresFilter: string;
+  public sectorFilter: string;
 
 
   constructor(private empresasService: EmpresasService,

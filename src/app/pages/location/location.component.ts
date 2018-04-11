@@ -19,7 +19,7 @@ export class LocationComponent {
   public poligonoFilter: string;
   public filtroEmpresasNombre: string;
   public sectores: any;
-  public sectoresFilter: string;
+  public sectorFilter: string;
   constructor(private empresasService: EmpresasService,
               private poligonosService: PoligonosService,
               private sectorService: SectorService,
@@ -49,7 +49,7 @@ export class LocationComponent {
       this.route.queryParams
       .subscribe(params => {
         if(+params['sector'])
-          this.sectoresFilter =  String(+params['sector']);
+          this.sectorFilter =  String(+params['sector']);
       });
   }
 

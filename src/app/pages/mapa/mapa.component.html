@@ -11,7 +11,7 @@
           <mat-option *ngFor="let poligono of poligonos" [value]="poligono.id">
             {{poligono.title}}
           </mat-option>
-          <mat-option>Todos</mat-option>
+           <mat-option>Todos</mat-option>
         </mat-select>
       </mat-form-field>
 
@@ -25,6 +25,11 @@
       </mat-form-field>
 
     </div>
+
+    
+
+
+
     <div class="mapa">
       <agm-map [latitude]="lati" [longitude]="longi" [zoom]="14">
         <agm-marker
@@ -35,7 +40,7 @@
            <mat-list>
             <mat-list-item>
                   <mat-icon mat-list-icon>near_me</mat-icon>
-                  <a target="_blank" jstcache="2" href="https://maps.google.com/maps?ll=38.883,-0.5883903&amp;z=15&amp;t=m&amp;hl=es-ES&amp;gl=US&amp;mapclient=embed&amp;q=38%C2%B052'47.224%22N%200%C2%B000'35%18.205W@{{m.lati}},{{m.longi}}" jsaction="mouseup:defaultCard.largerMap" class="google-maps-link">Ver en MAPS</a>
+                  <a target="_blank" jstcache="2" href="https://maps.google.com/maps?ll=38.883,-0.5883903&amp;z=15&amp;t=m&amp;hl=es-ES&amp;gl=US&amp;mapclient=embed&amp;q=38%C2%B052'47.224%22N%200%C2%B000'35%18.205W@{{m.lati}},{{m.longi}}" jsaction="mouseup:defaultCard.largerMap" class="google-maps-link">Ver en MAPS</a>        
                 </mat-list-item>
               </mat-list>
           </agm-info-window>
